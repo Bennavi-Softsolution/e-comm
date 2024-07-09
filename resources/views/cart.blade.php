@@ -54,237 +54,251 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    width: 100%
-}
-.cart {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-}
-
-.added-to-basket {
-    background-color: #700C0C;
-    color: white;
-    padding: 20px;
-}
-
-.added-to-basket h2 {
-    margin-top: 0;
-    text-align: center;
-}
-.cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #FFFFFF;
-    padding: 10px;
-    border-radius: 8px;
-}
-.cart-item img {
-    width: 20%;
-    height: auto;
-    border-radius: 8px;
-}
-.item-details {
-    flex: 1;
-    margin-left: 20px;
-    padding-left: 20px;
-}
-.item-details h3 {
-    margin-top: 0;
-}
-.quantity {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-.quantity input {
-    width: 50px;
-    margin-left: 10px;
-}
-.remove {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-   margin-top: 10px;
-}
-.remove:hover {
-    background-color: darkred;
-}
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.recommendations {
-    margin-top: 20px;
-    overflow: hidden;
-    position: relative;
-    background-color: #D9D9D9;
-}
-.recommendations h2 {
-    margin-bottom: 20px;
-    color:black;
-    text-align: center;
-}
-.product-carousel {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.5s ease;
-    justify-content: center;
-}
-.product-item {
-    flex: 0 0 auto;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 200px;
-    margin-bottom: 25px;
-}
-.product-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-.product-item h3 {
-    margin-top: 0;
-}
-.add-to-cart {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.add-to-cart:hover {
-    background-color: darkred;
-}
-.carousel-controls {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-}
-.carousel-controls button {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-.carousel-controls button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .cart {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .added-to-basket {
+            background-color: #700C0C;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .added-to-basket .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .added-to-basket .close:hover {
+            color: #ffcccb;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .cart-item img {
+            width: 20%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .item-details h3 {
+            margin-top: 0;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .quantity input {
+            width: 75px;
+            margin-left: 10px;
+        }
+        .remove {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .remove:hover {
+            background-color: darkred;
+        }
+        .recommendations {
+            margin-top: 20px;
+            background-color: #D9D9D9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .recommendations h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: black;
+        }
+        .carousel {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+        }
+        .product-item {
+            flex: 0 0 auto;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .product-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product-item h3 {
+            margin-top: 0;
+        }
+        .add-to-cart {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .add-to-cart:hover {
+            background-color: darkred;
+        }
     </style>
 </head>
 <body>
-        <div class="cart">
-         <div class="added-to-basket">
+    <div class="cart mt-4">
+        <div class="added-to-basket">
             <h2>Added to Basket</h2>
-            </div>
-
-            <div class="cart-item">
-                <img src="{{ asset('pictures/vase.png') }}" alt="Vintage Vase">
-                <div class="item-details">
-                    <h3>VINTAGE VASE</h3>
-                    <p>A striking addition to any home decor, this vintage vase...</p>
-                    <p>Price: KES 3500</p>
-                    <p>Item: KED-1284</p>
-
-
-                    <div class="quantity">
-                        <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity" name="quantity" value="1" min="1">
-                    </div>
-                    <button class="remove">Remove</button>
-                </div>
-            </div>
             <button class="close">X</button>
-        
-        <div class="recommendations">
-        <div class="carousel-controls">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
+        </div>
+
+        <div class="cart-item d-flex justify-content-between align-items-center my-3">
+            <img src="path/to/your/image.jpg" alt="Vintage Vase">
+            <div class="item-details flex-fill ms-3">
+                <h3>VINTAGE VASE</h3>
+                <p>A striking addition to any home decor, blending seamlessly with both contemporary interiors and eclectic vintage themes.</p>
+                <p><strong>Price:</strong> KES 2500</p>
+                <p><strong>Item:</strong> 1234</p>
+                <div class="quantity d-flex align-items-center">
+                    <label for="quantity" class="me-2">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control">
+                </div>
+                <p class="text-primary">Available offer to save you money</p>
+                <button class="remove btn btn-danger ms-3"><i class="bi bi-trash"></i> REMOVE</button>
             </div>
+        </div>
 
+        <div class="recommendations">
             <h2>Products You May Like</h2>
-            <div class="product-carousel">
-                <div class="product-item">
-                    <img src="vase.jpg" alt="Vintage Vase">
-                    <h4>VINTAGE VASE</h4>
-                    <p>Price: KES 3500</p>
-                    <button class="add-to-cart">Add to Cart</button>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-
-                <div class="product-item">
-                    <img src="vase.jpg" alt="Vintage Vase">
-                    <h4>VINTAGE VASE</h4>
-                    <p>Price: KES 3500</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
+                                <h3>VINTAGE VASE</h3>
+                                <p><strong>Price:</strong> KES 2500</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-item">
-                    <img src="vase.jpg" alt="Vintage Vase">
-                    <h4>VINTAGE VASE</h4>
-                    <p>Price: KES 3500</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-
-                <div class="product-item">
-                    <img src="vase.jpg" alt="Vintage Vase">
-                    <h4>VINTAGE VASE</h4>
-                    <p>Price: KES 3500</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const carousel = document.querySelector('.product-carousel');
-
-        let scrollAmount = 0;
-        const scrollStep = 200;
-
-        nextBtn.addEventListener('click', function() {
-            scrollAmount += scrollStep;
-            if (scrollAmount > carousel.scrollWidth - carousel.clientWidth) {
-                scrollAmount = carousel.scrollWidth - carousel.clientWidth;
-            }
-            carousel.style.transform = `translateX(${-scrollAmount}px)`;
+        // Auto-slide the carousel every 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.querySelector('#carouselExampleIndicators');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 5000
+            });
         });
 
-        prevBtn.addEventListener('click', function() {
-            scrollAmount -= scrollStep;
-            if (scrollAmount < 0) {
-                scrollAmount = 0;
-            }
-            carousel.style.transform = `translateX(${-scrollAmount}px)`;
+        // Close button functionality for the added-to-basket section
+        document.querySelector('.added-to-basket .close').addEventListener('click', function() {
+            document.querySelector('.added-to-basket').style.display = 'none';
         });
     </script>
-
 </body>
 </html>
