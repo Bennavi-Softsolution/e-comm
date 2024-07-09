@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
-
 Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::get('checkout', function () {
+    return view('checkout');
+});
+
 Route::get('/signup', function () {
     return view('signup');
-
 });
