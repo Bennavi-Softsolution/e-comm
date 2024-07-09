@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages/home');
 });
+
 
 Route::get('checkout', function () {
     return view('checkout');
+
+Route::get('/signup', function () {
+    return view('signup');
+
 });
