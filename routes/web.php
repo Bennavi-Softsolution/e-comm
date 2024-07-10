@@ -40,3 +40,8 @@ Route::get('/users', function () {
     return view('users');
 });
 
+Route::get('/order', function () {
+    return view('order');
+});
+
+
