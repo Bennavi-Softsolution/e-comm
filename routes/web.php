@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
+
+Route::get('/product', function () {
+    return view('product');
+});
+Route::get('/navbar', function () {
+    return view('navbar');
+});
+
 Route::get('/cart', function () {
     return view('cart');
 });
@@ -28,3 +36,4 @@ Route::get('checkout', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
