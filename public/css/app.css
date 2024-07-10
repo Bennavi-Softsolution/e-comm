@@ -27,13 +27,19 @@
 
 }
 
-.child-container {
-   
+.payment-options {
+    background-color: #EE1313;
+    padding: 40px;
 }
 
+
+
 .form-check {
-    border-radius: 20px;
-    border-color: #EE1313;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-color: #f0dd09;
+    border-width: 1-e;
 }
 
 .form-check label {
@@ -42,8 +48,10 @@
 
 }
 
+
+
 .form-check img {
-    width: 40rem;
+    width: 20rem;
     
 }
 
