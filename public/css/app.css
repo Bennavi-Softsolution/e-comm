@@ -1,0 +1,19 @@
+
+.background{
+    background-color: red;
+}
+
+#btn-custom {
+    background-color: #EE1313;
+    color: white; /* Text color */
+    border-color: #EE1313; /* Border color (optional) */
+}
+
+#btn-custom:hover,
+#btn-custom:focus {
+    background: rgba(238, 19, 19, 0.2);; /* Darker shade of red for hover/focus */
+    border-color: rgba(238, 19, 19, 0.2);; /* Adjust border color accordingly */
+    color: white;
+}
+
+
