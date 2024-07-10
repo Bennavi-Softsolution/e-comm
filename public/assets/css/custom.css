@@ -1,0 +1,43 @@
+/* Table Head Styling */
+.tablehead {
+    background-color: red;
+    color: white;
+}
+
+/* Name Column Styling */
+.table th[scope="row"] {
+    font-weight: 400; /* Light font weight */
+}
+
+/* Table Border Styling */
+.table,
+.table th,
+.table td {
+    border-bottom: 2px solid red;
+}
+
+.table thead th {
+    border-bottom: 2px solid red;
+}
+.custom-tablehead {
+    background-color: red;
+    color: white;
+}
+
+/* Table Head Column Styling */
+.custom-th {
+    color: white; /* Ensure text color is white */
+}
+.search{
+    background-color: red;
+    color: white;
+    display: flex;
+}
+.borderstyle{
+    border-color: red;
+    color: red;
+    padding: 20;
+    border-radius: 40%;
+    font-size: 80%;
+    border: solid 3px red;
+}
