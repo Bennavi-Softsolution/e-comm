@@ -44,4 +44,6 @@ Route::get('/order', function () {
     return view('order');
 });
 
-
+Route::get('/payment', function () {
+    return view('pages/payment');
+});
