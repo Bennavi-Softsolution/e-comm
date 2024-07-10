@@ -5,14 +5,14 @@
 
         <div class="row mb-5">
 
-            <div class="col mt-md-5 px-0">
+            <div class="col mt-5 px-0">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p1.jpg') }}" class="card-img-top" alt="Description of the image">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">StrideMax Pro Running Shoes</h5>
                         <p class="card-text">Lightweight, breathable, and built for performance. Your go-to choice for
                             running with style and comfort.</p>
-                        <div class="row justify-content-end">
+                        <div class="row justify-content-end mt-auto"> <!-- Use mt-auto to push the row to the bottom -->
                             <div class="rating-stars">
                                 <i class="fas fa-star checked"></i>
                                 <i class="fas fa-star checked"></i>
@@ -32,14 +32,15 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-0">
+
+            <div class="col mt-5 px-0">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p2.jpg') }}" class="card-img-top" alt="Description of the image">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">GripMax Trail Hiking Boots</h5>
                         <p class="card-text">ombine waterproof durability with high-traction soles, ideal for conquering
                             rugged terrain and exploring new heights comfortably.</p>
-                        <div class="row justify-content-end">
+                        <div class="row justify-content-end mt-auto">
                             <div class="rating-stars">
                                 <i class="fas fa-star checked"></i>
                                 <i class="fas fa-star checked"></i>
