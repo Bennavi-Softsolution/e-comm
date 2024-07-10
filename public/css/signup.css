@@ -1,0 +1,31 @@
+#signup-page{
+    background-color: #ffff;
+    padding: 3rem 5rem;
+}
+
+#form-page{
+    padding: 4rem 8rem;
+}
+
+#form-input{
+    width : 100vh;
+    padding: 0.5rem;
+}
+
+/* .inputfield{
+    background-color: #EE1313;
+    color: aliceblue;
+} */
+
+.btn-color{
+    background-color: #EE1313;
+    color: white; /* Text color */
+    border-color: #EE1313;
+}
+
+.btn-color:hover,
+.btn-color:focus {
+    background: #eb3636; /* Darker shade of red for hover/focus */
+    border-color: rgba(238, 19, 19, 0.2); /* Adjust border color accordingly */
+    color: black;
+}
