@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('home')
+
+<button> <a href="{{ url('payment') }}">Payment</a></button>
     <div class="container">
 
-        <div class="row mb-5">
+        <div class="row mb-5 gx-1">
 
-            <div class="col mt-5 px-0">
+            <div class="col-sm mt-5 px-0">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p1.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body d-flex flex-column">
@@ -33,7 +35,7 @@
             </div>
 
 
-            <div class="col mt-5 px-0">
+            <div class="col-sm mt-5 px-0">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p2.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body d-flex flex-column">
@@ -60,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p3.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -87,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p4.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -114,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p5.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -142,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p6.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -170,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p7.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -197,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p8.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
@@ -224,7 +226,7 @@
                 </div>
             </div>
 
-            <div class="col mt-md-5 px-1">
+            <div class="col mt-5 px-1">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('images/p9.jpg') }}" class="card-img-top" alt="Description of the image">
                     <div class="card-body">
