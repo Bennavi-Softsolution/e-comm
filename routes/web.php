@@ -36,4 +36,7 @@ Route::get('checkout', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+Route::get('/users', function () {
+    return view('users');
+});
 
