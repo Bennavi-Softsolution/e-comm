@@ -14,10 +14,34 @@
 
         .sidebar {
             width: 200px;
+        
         }
 
         .container {
             margin-left: 10px;
+        }
+
+        .nav-link {
+            color: #000;
+        }
+
+        .btn-custom {
+            background-color: #EE1313;
+            color: white;
+            /* Text color */
+            border-color: #EE1313;
+            /* Border color (optional) */
+        }
+
+        .btn-custom:hover,
+        .btn-custom:focus {
+            background: rgba(238, 19, 19, 0.2);
+            ;
+            /* Darker shade of red for hover/focus */
+            border-color: rgba(238, 19, 19, 0.2);
+            ;
+            /* Adjust border color accordingly */
+            color: white;
         }
     </style>
 
@@ -47,7 +71,7 @@
                         <div id="shoes" class="tab-pane fade show active">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($shoes as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -65,7 +89,7 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
                                                     </div>
@@ -79,7 +103,7 @@
                         <div id="watches" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($watches as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -97,7 +121,7 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
                                                     </div>
@@ -111,7 +135,7 @@
                         <div id="accessories" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($accessories as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -129,7 +153,7 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
                                                     </div>
