@@ -34,3 +34,6 @@ Route::get('/navbar', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+Route::get('/manage-product', function () {
+    return view('manage-product');
+});
