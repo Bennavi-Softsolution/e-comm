@@ -17,6 +17,12 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/product', function () {
+    return view('product');
+});
+Route::get('/navbar', function () {
+    return view('navbar');
+});
 
 Route::get('/product', function () {
     return view('product');
@@ -40,6 +46,11 @@ Route::get('address', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
+Route::get('/manage-product', function () {
+    return view('manage-product');
+});
+
 Route::get('/users', function () {
     return view('users');
 });
@@ -51,3 +62,4 @@ Route::get('/order', function () {
 Route::get('/payment', function () {
     return view('pages/payment');
 });
+
