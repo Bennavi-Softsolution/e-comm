@@ -31,6 +31,14 @@ Route::get('/navbar', function () {
     return view('navbar');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('checkout', function () {
+    return view('checkout');
+});
+
 Route::get('/signup', function () {
     return view('signup');
 });
