@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="cart mt-4">
         <div class="added-to-basket">
             <h2>Added to Basket</h2>
-            <button class="close">X</button>
+            <button class="close"><img src="{{ asset('../images/close.jpg') }}"</button>
         </div>
 
         <div class="cart-item d-flex justify-content-between align-items-center my-3">
@@ -72,15 +72,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p><strong>Price:</strong> KES 999</p>
                 <p><strong>Item:</strong> 1234</p>
                 <div class="quantity d-flex align-items-center">
-                    <label for="quantity" class="me-2">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control">
+                    <label for="quantity" class="me-2"><strong>Quantity:</strong></label>
+                    
+                    <button class="btn btn-outline-secondary btn-sm me-2" onclick="updateQuantity(-1)"> <b>-</b></button>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" >
+                    <button class="btn btn-outline-secondary btn-sm ms-2" onclick="updateQuantity(1)"><b>+</b></button>
                 </div>
                 <div>
                 <a href="#" class="text-primary">
                     Available offer to save you money</di>
                 </a>
                 </div>
-                <button class="remove btn btn-danger ms-3"><i class="bi bi-trash"></i> REMOVE</button>
+                <button class="remove btn btn-danger ms-3">
+                    <i class="bi bi-trash"></i>
+                    <img src="{{ asset('../images/remove.jpg') }}"> REMOVE</button>
             </div>
         </div>
 
@@ -91,7 +96,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center">
@@ -107,22 +114,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <p><strong>Price:</strong> KES 7,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
-                            <div class="product-item me-3">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                        <div class="product-item me-3">
                                 <img src="{{ asset('../images/sneakers.jpg') }}" alt="Sneakers">
                                 <h3>Men's casual sneakers white shoes </h3>
                                 <p><strong>Price:</strong> KES 2,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p3.jpg') }}" alt="UrbanFlex">
                                 <h3>UrbanFlex Laced Official Shoe</h3>
                                 <p><strong>Price:</strong> KES 1,499</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
+                            </div>
+                            </div>
+
+                     <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p21.jpg') }}" alt="OfficialShoe">
                                 <h3>Mens Black Laced Official Shoe</h3>
@@ -137,6 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </div>
                         </div>
                     </div>
+
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
@@ -151,22 +165,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <p><strong>Price:</strong> KES 2,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
-                            <div class="product-item me-3">
-                                <img src="{{ asset('../images/runp12.jpg') }}" alt="TrainerShoes">
-                                <h3>Fashion Trainer Shoes for Running</h3>
-                                <p><strong>Price:</strong> KES 1,999</p>
-                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
-                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                   <img src="{{ asset('../images/prev.jpg') }}">
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <img src="{{ asset('../images/next.jpg') }}">
                 </button>
             </div>
         </div>
@@ -174,6 +181,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
+        function updateQuantity(change) {
+            let quantityInput = document.getElementById('quantity');
+            let currentValue = parseInt(quantityInput.value);
+            let newValue = currentValue + change;
+            if (newValue >= 1) {
+                quantityInput.value = newValue;
+            }
+        }
         // Auto-slide the carousel every 5 seconds
         document.addEventListener('DOMContentLoaded', function() {
             var myCarousel = document.querySelector('#carouselExampleIndicators');
