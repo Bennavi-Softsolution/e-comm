@@ -1,0 +1,135 @@
+body{
+    background-color: #D9D9D9;
+    color: white;
+}
+.footer-container {
+    background-color: #D9D9D9;
+    padding-top: 4vh; /* Padding to create white space at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Top frame style */
+.footer-top-frame {
+    background-color: black;
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+    margin-bottom: 10vh; /* Margin to create the white separator */
+}
+
+/* Separator style */
+.footer-separator {
+    background-color: #D9D9D9;    
+    width: 100%;
+    height: 8vh; /* Adjust height as needed */
+}
+
+/* Bottom frame style */
+.footer-bottom-frame {
+    background-color: black;
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+}
+.kavoon-regular {
+    font-family: "Kavoon", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .logo-position{
+    margin-right: 2vw;
+    padding-top: 4vh;
+
+
+  }
+  .align-row{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+  .align-row div {
+    margin-right: 2vw; /* Adjust the margin as needed */
+}
+.icon-size {
+    height: 2vw;
+    width: 2.4vw;
+}
+.icon-spacing {
+    margin-right: 2vw;
+}
+.ecomm{
+    padding-top: 6vh;
+    padding-bottom: 4vh;
+}
+.propertyrights{
+padding-top: 4vh;
+padding-bottom: 4vh;
+}
+.rowform{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+   
+}
+.rowform p {
+    margin: 0; /* Remove default margin */
+    padding-left: 1vw; /* Add some spacing between items */
+    font-size: 1vw; /* Adjust font size if needed */
+}
+.propertyicon{
+    height: 1vw;
+    width: 1vw;
+   
+}
+.company{
+    color: red;
+    font-size: 0.6vw;
+}
+.tb{
+    background-color: black;
+    color: red;
+}
+.btnsend{
+    background-color: red;
+    color: white;
+}
+.rightside{
+    display: flex;
+    flex-direction: row;
+}
+.subscribe{
+    padding-top: 10vh;
+    font-weight: 700;
+}
+.form{
+    border:2% solid white;
+}
+.border-background{
+    background-color: black;
+}
+.border-size{
+    width: 25vw;
+}
+.align-subscribe{
+display: flex;
+flex-direction: column;
+justify-content: start;
+}
+.form input::placeholder {
+    color: white; /* Pure white placeholder */
+    opacity: 1; /* Remove blur effect */
+}
+table {
+    margin-top: 10vh;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    }
+   td{
+  color: red;
+  }

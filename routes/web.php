@@ -47,3 +47,6 @@ Route::get('/order', function () {
 Route::get('/payment', function () {
     return view('pages/payment');
 });
+Route::get('/clientfooter', function () {
+    return view('clientfooter');
+});
