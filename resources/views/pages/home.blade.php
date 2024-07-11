@@ -2,9 +2,9 @@
 
 @section('home')
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-md-3 g-2">
             @foreach ($products as $product)
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <div class="card h-100">
                         <img src="{{ asset('images/' . $product->image) }}" class="card-img-top" alt="{{ $product->title }}">
                         <div class="card-body d-flex flex-column">
