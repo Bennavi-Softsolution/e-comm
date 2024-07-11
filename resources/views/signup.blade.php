@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecomm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/signup-deliveries.css') }}" rel="stylesheet">
 </head>
 
 <body id = "signup-page">
@@ -31,8 +31,8 @@
         <div class="form-group row" id = "form-input">
             <div class="col"> <label for="inputLocation">District</label></div>
             <div class="col"><select id="inputState" class="form-control inputfield"></div>
-            <option selected>Choose...</option>
-            <option>...</option>
+            <option class="option" selected>Choose...</option>
+            <option class="inputfield option">...</option>
             </select>
         </div>
         <div class="form-group row" id = "form-input">

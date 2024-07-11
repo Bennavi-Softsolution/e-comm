@@ -40,3 +40,7 @@ Route::get('/users', function () {
     return view('users');
 });
 
+Route::get('/deliveries', function () {
+    return view('deliveries');
+});
+
