@@ -29,10 +29,10 @@
 </div>
               
     <div>
-    <table class="table">
-  <thead class="custom-tablehead tablehead">
+    <table class="table table-hover table-responsive"  >
+  <thead class=" tablehead custom-tablehead" id="tableHead">
     <tr>
-      <th class="custom-th" scope="col" class="tablehead">Name</th>
+      <th class="custom-th" scope="col">Name</th>
       <th class="custom-th" scope="col">Passwords</th>
       <th class="custom-th" scope="col">Email</th>
       <th class="custom-th" scope="col">City</th>
@@ -115,7 +115,7 @@
     <div class="container text-center">
   <div class="row">
     <div class="col">
-    <button type="button" class="btn btn-danger">Showing page 1 of 10</button>
+    <div class="info-card">Showing 1 of 10 pages</div>
     </div>
     <div class="col">
 
