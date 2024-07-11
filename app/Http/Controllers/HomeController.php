@@ -69,7 +69,7 @@ class HomeController extends Controller
                 'image' => 'p9.jpg',
                 'title' => 'SwiftGrip Cross Training Shoes',
                 'description' => 'Versatile and supportive, these shoes are designed to enhance stability and performance during diverse workout routines.',
-                'price' => 10999,
+                'price' => 6999,
                 'rating' => 3,
             ],
         ];
