@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('home')
-    <div class="container">
-        <div class="row mb-5 gx-1">
+    <div class="container-fluid">
+        <div class="row row-cols row-cols-md mb-5 g-1">
             @foreach ($products as $product)
                 <div class="col-sm mt-5 px-0">
                     <div class="card" style="width: 18rem;">
