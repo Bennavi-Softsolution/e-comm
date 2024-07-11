@@ -57,26 +57,7 @@ body {
     margin-bottom: 10px;
 }
 .quantity input {
-    width: 75px;
-    margin-left: 10px;
-}
-
-.color-options {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.color-option {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-.color-option.selected {
-    border-color: #000;
+    width: 50px;
 }
 
 .remove {
@@ -87,6 +68,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+    display: flex;
 }
 .remove:hover {
     background-color: darkred;
