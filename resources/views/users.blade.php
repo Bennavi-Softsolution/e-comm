@@ -7,15 +7,18 @@
 
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet" >
     <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" >
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body> 
   
 <div class="container text-center">
 <div class="row">
     <div class="col-8">
+          <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search">
+              <button class="search-button"><i class="fas fa-search"></i></button>
+          </div>
 
-   
      
     </div>
     <div class="col-4">
@@ -27,7 +30,7 @@
               
     <div>
     <table class="table">
-  <thead class="custom-tablehead">
+  <thead class="custom-tablehead tablehead">
     <tr>
       <th class="custom-th" scope="col" class="tablehead">Name</th>
       <th class="custom-th" scope="col">Passwords</th>
