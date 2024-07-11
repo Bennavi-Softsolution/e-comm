@@ -8,12 +8,21 @@
         color: white; /* Change text color */
         border-color: red; /* Change border color (optional) */
     }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 10px;
+    }
+    
 </style>
 
 <div class="container-fluid mt-3">
     <div class="row">
         <!-- Sidebar container (first column) -->
-        <div class="col-md-3">
+        <div class="col-md-3 sidebar">
             <div class="container">
                 <ul id="myTab" class="nav flex-column nav-pills">
                     <li class="nav-item">
