@@ -33,6 +33,10 @@ Route::get('checkout', function () {
     return view('checkout');
 });
 
+Route::get('address', function () {
+    return view('address');
+});  
+
 Route::get('/signup', function () {
     return view('signup');
 });
