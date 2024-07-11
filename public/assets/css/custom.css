@@ -1,0 +1,87 @@
+/* Table Head Styling */
+.tablehead {
+    background-color: red;
+    color: white;
+}
+
+/* Name Column Styling */
+.table th[scope="row"] {
+    font-weight: 400; /* Light font weight */
+}
+
+/* Table Border Styling */
+.table,
+.table th,
+.table td {
+    border-bottom: 2px solid red;
+}
+
+.table thead th {
+    border-bottom: 2px solid red;
+}
+.custom-tablehead {
+    background-color: red;
+    color: white;
+}
+
+/* Table Head Column Styling */
+.custom-th {
+    color: white; /* Ensure text color is white */
+}
+.search{
+    background-color: red;
+    color: white;
+    display: flex;
+}
+.borderstyle{
+    border-color: red;
+    color: red;
+    padding: 20;
+    border-radius: 40%;
+    font-size: 80%;
+    border: solid 3px red;
+}
+/* Style for the search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0; /* Vertical margin using viewport height */
+}
+
+/* Style for the search input field */
+.search-input {
+    width: 20vw; /* Width using viewport width */
+    padding: 1.5vh 2vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    color: white;
+    background-color: red;
+    font-size: 1.5vw; /* Font size using viewport width */
+}
+
+/* Style for the search button */
+.search-button {
+    padding: 1.5vh 2vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw; /* Font size using viewport width */
+}
+
+/* Ensure the search button and input field are the same height */
+.search-input, .search-button {
+    height: 6vh; /* Height using viewport height */
+}
+
+/* Change the placeholder text color */
+.search-input::placeholder {
+    color: white;
+    opacity: 0.7; /* Adjust opacity as needed */
+}
