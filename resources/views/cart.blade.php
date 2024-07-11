@@ -54,125 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        .cart {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-        }
-        .added-to-basket {
-            background-color: #700C0C;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        .added-to-basket .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: transparent;
-            color: white;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .added-to-basket .close:hover {
-            color: #ffcccb;
-        }
-        .cart-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background-color: #FFFFFF;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .cart-item img {
-            width: 20%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .item-details {
-            flex: 1;
-            margin-left: 20px;
-        }
-        .item-details h3 {
-            margin-top: 0;
-        }
-        .quantity {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .quantity input {
-            width: 75px;
-            margin-left: 10px;
-        }
-        .remove {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .remove:hover {
-            background-color: darkred;
-        }
-        .recommendations {
-            margin-top: 20px;
-            background-color: #D9D9D9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .recommendations h2 {
-            margin-bottom: 20px;
-            text-align: center;
-            color: black;
-        }
-        .carousel {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-        }
-        .product-item {
-            flex: 0 0 auto;
-            background-color: #fff;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 200px;
-        }
-        .product-item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .product-item h3 {
-            margin-top: 0;
-        }
-        .add-to-cart {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-        }
-        .add-to-cart:hover {
-            background-color: darkred;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('../css/cart.css') }}" >
 </head>
 <body>
     <div class="cart mt-4">
@@ -182,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="cart-item d-flex justify-content-between align-items-center my-3">
-            <img src="path/to/your/image.jpg" alt="Vintage Vase">
+            <img src="{{ asset('../images/p5.jpg') }}" alt="Vintage Vase">
             <div class="item-details flex-fill ms-3">
                 <h3>VINTAGE VASE</h3>
                 <p>A striking addition to any home decor, blending seamlessly with both contemporary interiors and eclectic vintage themes.</p>
