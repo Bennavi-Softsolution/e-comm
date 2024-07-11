@@ -64,17 +64,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="cart-item d-flex justify-content-between align-items-center my-3">
-            <img src="{{ asset('../images/p5.jpg') }}" alt="Vintage Vase">
+            <img src="{{ asset('../images/p5.jpg') }}" alt="Sneakers">
             <div class="item-details flex-fill ms-3">
-                <h3>VINTAGE VASE</h3>
-                <p>A striking addition to any home decor, blending seamlessly with both contemporary interiors and eclectic vintage themes.</p>
-                <p><strong>Price:</strong> KES 2500</p>
+                <h3>SwiftGlide Slip-On Sneakers</h3>
+                <p>SwiftGlide Slip-On Sneakers: Effortless style meets comfort with these 
+                    versatile slip-ons, perfect for everyday wear.</p>
+                <p><strong>Price:</strong> KES 999</p>
                 <p><strong>Item:</strong> 1234</p>
                 <div class="quantity d-flex align-items-center">
                     <label for="quantity" class="me-2">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control">
                 </div>
-                <p class="text-primary">Available offer to save you money</p>
+                <div>
+                <a href="#" class="text-primary">
+                    Available offer to save you money</di>
+                </a>
+                </div>
                 <button class="remove btn btn-danger ms-3"><i class="bi bi-trash"></i> REMOVE</button>
             </div>
         </div>
@@ -91,43 +96,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/p2.jpg') }}" alt="GripMax">
+                                <h3>GripMax Trail Hiking Boots. waterproof</h3>
+                                <p><strong>Price:</strong> KES 1,799</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/p8.jpg') }}" alt="VentureTrack">
+                                <h3>VentureTrack Trail Running Shoes</h3>
+                                <p><strong>Price:</strong> KES 7,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
-                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
-                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
-                            </div>
-                            <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
-                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
-                            </div>
-                            <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/sneakers.jpg') }}" alt="Sneakers">
+                                <h3>Men's casual sneakers white shoes </h3>
+                                <p><strong>Price:</strong> KES 2,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                         </div>
@@ -135,21 +118,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/p3.jpg') }}" alt="UrbanFlex">
+                                <h3>UrbanFlex Laced Official Shoe</h3>
+                                <p><strong>Price:</strong> KES 1,499</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/p21.jpg') }}" alt="OfficialShoe">
+                                <h3>Mens Black Laced Official Shoe</h3>
+                                <p><strong>Price:</strong> KES 2,499</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                             <div class="product-item me-3">
-                                <img src="path/to/your/image.jpg" alt="Vintage Vase">
-                                <h3>VINTAGE VASE</h3>
-                                <p><strong>Price:</strong> KES 2500</p>
+                                <img src="{{ asset('../images/p4.jpg') }}" alt="OfficialShoe">
+                                <h3>Mens Brown Laced Official Shoe </h3>
+                                <p><strong>Price:</strong> KES 2,499</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="product-item me-3">
+                                <img src="{{ asset('../images/p7.jpg') }}" alt="TrekkingSandals">
+                                <h3>SummitVenture Trekking Sandals</h3>
+                                <p><strong>Price:</strong> KES 9,999</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="{{ asset('../images/p20.jpg') }}" alt="CasualSneakers">
+                                <h3>Casual Sneakers Sport Shoes</h3>
+                                <p><strong>Price:</strong> KES 2,999</p>
+                                <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item me-3">
+                                <img src="{{ asset('../images/runp12.jpg') }}" alt="TrainerShoes">
+                                <h3>Fashion Trainer Shoes for Running</h3>
+                                <p><strong>Price:</strong> KES 1,999</p>
                                 <button class="add-to-cart btn btn-primary">Add to Cart</button>
                             </div>
                         </div>
