@@ -58,7 +58,7 @@
 <!-- beggining of lower footer -->
             <div class="footer-bottom-frame">
 
-            <div class="container text-center">
+            <div class="container">
   <div class="row">
     <div class="col">
 
@@ -102,14 +102,12 @@
     </div>
   </div>
 </div>
-
           <div class="rowform propertyrights">
                 <img src="{{asset('assets/images/property rights.png')}}" alt="Logo " class= "propertyicon"> 
                 <p>2024 All rights reserved</p>
                 <p class="company">Bennavi-softsolution</p>
                 </div>
      </div>
-        
         </footer>
 
     </body>
