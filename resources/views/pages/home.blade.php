@@ -89,26 +89,10 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2" alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,26 +122,10 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2" alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,28 +155,10 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2"
-                                                                        alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast"
-                                                                        aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -232,13 +182,6 @@
                 e.preventDefault();
                 $(this).tab('show');
             });
-        });
-        // JavaScript to show toast
-        var liveToastBtn = document.getElementById('liveToastBtn');
-        var liveToast = new bootstrap.Toast(document.getElementById('liveToast'));
-
-        liveToastBtn.addEventListener('click', function() {
-            liveToast.show();
         });
     </script>
 @endsection
