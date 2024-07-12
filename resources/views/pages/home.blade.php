@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Home Page')
+
 @section('home')
     <style>
         /* Custom style for active nav-link */

@@ -1,57 +1,125 @@
 @extends('layouts.app')
 
 @section('payment')
-    <div class="container">
+    <style>
+        /* Custom CSS for animations and transitions */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
 
-        <div class="payment-options mt-5">
+            100% {
+                opacity: 1;
+            }
+        }
 
-            <div class="child-container">
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
 
-                <div class="form-check">
-                    <input class="form-check-input mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Pay Now(M-pesa, Airtel, or Bank Cards)
-                    </label>
-                    <p class="mt-2">Pay Now Fast and Securely with Mastercard of Visa</p>
+        /* Custom modal animation */
+        .modal.fade .modal-dialog {
+            transform: translate(0, -50%);
+            transition: transform 0.3s ease-out;
+        }
+
+        .modal.fade.show .modal-dialog {
+            transform: translate(0, 0);
+        }
+
+        /* Custom button hover effect */
+        .btn-custom-effect {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            background-color: #EE1313;
+            /* Base button background color */
+            color: #fff;
+            /* Base button text color */
+            border-color: #EE1313;
+            /* Base button border color */
+        }
+
+        .btn-custom-effect:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #D20C0C;
+            /* Adjusted button background color on hover */
+            border-color: #D20C0C;
+            /* Adjusted button border color on hover */
+        }
+
+        /* Custom input focus effect */
+        .form-control-custom {
+            transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+
+        .form-control-custom:focus {
+            border-color: #EE1313;
+            box-shadow: 0 0 0 0.2rem rgba(238, 19, 19, 0.25);
+        }
+    </style>
+
+    <div class="container mt-4">
+        <!-- Your existing content -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Select Payment Method</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-3 mt-5 accept-text">
-                                <h1>We Accept</h1>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pay Now (M-pesa, Airtel, or Bank Cards)</h5>
+                                        <p class="card-text">Pay Now Fast and Securely with Mastercard or Visa</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="payNowRadio" checked>
+                                            <label class="form-check-label" for="payNowRadio">
+                                                Pay Now (M-pesa, Airtel, or Bank Cards)
+                                            </label>
+                                        </div>
+                                        <p class="mt-2">You will be redirected to our payment platform to complete your
+                                            details</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col">
-                                <img src="{{ asset('images/payment-forms.png') }}" class="img-fluid"
-                                    alt="Payment methods Amex, M-pesa, Mastercard and Visa">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pay on Delivery with Mobile Money and Bank Cards</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="payOnDeliveryRadio">
+                                            <label class="form-check-label" for="payOnDeliveryRadio">
+                                                Pay on Delivery with Mobile Money and Bank Cards
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                    <p>You will be redirected to our payment platform to complete your details</p>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Pay on Delivery with Mobile Money and Bank Cards
-                    </label>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-3 mt-5 accept-text">
-                                <h1>We Accept</h1>
-                            </div>
-                            <div class="col">
-                                <img src="{{ asset('images/payment-forms.png') }}" class="img-fluid"
-                                    alt="Payment methods Amex, M-pesa, Mastercard and Visa">
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
-            </div>
-
-            <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                <button class="btn btn-light btn-lg" type="button">SELECT PAYMENT METHOD</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-custom">Select Payment Method</button>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="container mt-4">
+        <button type="button" class="btn btn-primary btn-custom-effect" data-bs-toggle="modal"
+            data-bs-target="#paymentModal">
+            Open Payment Modal
+        </button>
     </div>
 @endsection
