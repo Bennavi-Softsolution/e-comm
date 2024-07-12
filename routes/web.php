@@ -36,7 +36,7 @@ Route::get('/cart', function () {
 });
 
 Route::get('/checkout', function () {
-    return view('checkout');
+    return view('pages/checkout');
 });
 
 Route::get('/address', function () {
@@ -58,9 +58,6 @@ Route::get('/users', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
-Route::get('/payment', function () {
-    return view('pages/payment');
 });
 
 Route::get('/clientfooter', function () {
