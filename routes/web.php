@@ -29,11 +29,11 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('checkout', function () {
+Route::get('/checkout', function () {
     return view('checkout');
 });
 
-Route::get('address', function () {
+Route::get('/address', function () {
     return view('address');
 });  
 
@@ -41,7 +41,7 @@ Route::get('/signup', function () {
     return view('signup');
 
 });
-Route::get('login', function () {
+Route::get('/login', function () {
     return view('login');
 });
 Route::get('/payment', function () {
