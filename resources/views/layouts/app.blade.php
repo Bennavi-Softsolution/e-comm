@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- bootstrap linked below here. add custom components in app.scss -->
+    <!-- bootstrap linked below here. Add custom components in app.scss -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
@@ -17,7 +17,7 @@
     @yield('home')
     @yield('payment')
 
-    
+
 </body>
 
 </html>

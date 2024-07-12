@@ -21,31 +21,61 @@
         }
 
         .nav-link {
-            color: #000;
-        }
-
-        .btn-custom {
-            background-color: #EE1313;
-            color: white;
-            /* Text color */
-            border-color: #EE1313;
-            /* Border color (optional) */
-        }
-
-        .btn-custom:hover,
-        .btn-custom:focus {
-            background: rgba(238, 19, 19, 0.2);
-            /* Darker shade of red for hover/focus */
-            border-color: rgba(238, 19, 19, 0.2);
-            /* Adjust border color accordingly */
-            color: white;
+            color: inherit;
         }
 
         .rating-stars {
-            color: #FFD700; /* Default color for stars */
+            color: #FFD700;
+            /* Default color for stars */
+        }
+
+        /* Custom animations */
+        /* Custom animations */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-pills {
+            animation: slideInFromLeft 0.5s ease;
+        }
+
+        .nav-pills .nav-link {
+            position: relative;
+            color: inherit;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            margin-bottom: 10px;
+            text-decoration: none;
+            line-height: normal;
+        }
+
+        .nav-pills .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: rgba(238, 19, 19, 0);
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        .nav-pills .nav-link:hover::before,
+        .nav-pills .nav-link.active::before {
+            width: 100%;
+            background-color: rgba(238, 19, 19, 1);
+            /* Darker red for active and hover */
         }
     </style>
-
     <div class="container-fluid mt-3">
         <div class="row">
             <!-- Sidebar container (first column) -->
@@ -82,7 +112,8 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
@@ -113,7 +144,8 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
@@ -144,7 +176,8 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
