@@ -14,7 +14,6 @@
 
         .sidebar {
             width: 200px;
-
         }
 
         .container {
@@ -36,12 +35,14 @@
         .btn-custom:hover,
         .btn-custom:focus {
             background: rgba(238, 19, 19, 0.2);
-            ;
             /* Darker shade of red for hover/focus */
             border-color: rgba(238, 19, 19, 0.2);
-            ;
             /* Adjust border color accordingly */
             color: white;
+        }
+
+        .rating-stars {
+            color: #FFD700; /* Default color for stars */
         }
     </style>
 
@@ -81,8 +82,7 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
@@ -92,7 +92,6 @@
                                                         <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,8 +113,7 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
@@ -125,7 +123,6 @@
                                                         <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -147,8 +144,7 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
@@ -158,7 +154,6 @@
                                                         <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-
                                                     </div>
                                                 </div>
                                             </div>
