@@ -1,26 +1,51 @@
-# E-Commerce 
+# E-Commerce Project
 
-- Clone the repo using 
-```
-https://github.com/Bennavi-Softsolution/e-comm.git
-```
+This repository contains a Laravel-based e-commerce application.
 
-- To install all laravel dependencies run
-```
-composer install
-```
-- Copy all the contents of `.env.example` into a new `.env` file that you will create and then run 
-```
-php artisan key:generate
-```
-- Run the command below to install all the dependencies required for vite
-```
- npm install
-```
-- Run the below commands to compile bootstrap and start the dev server
-```
-php artisan serve
-```
-```
-npm run dev
-```
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- PHP
+- Composer
+- Node.js and npm
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Bennavi-Softsolution/e-comm.git
+   cd e-comm
+   ```
+1. **Install Laravel dependencies:**
+   ```bash
+   composer install
+   ```
+1. **Copy .env.example to .env and generate the application key:**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+1. **Install JavaScript dependencies:**
+   ```bash
+   npm install
+   ```
+
+### Development
+To start the development server:
+
+1. **Compile assets and start Laravel:**
+   ```bash
+   php artisan serve
+   ```
+1. **Compile assets with Vite:**
+   ```bash
+   npm run dev
+   ```
+
+
+   
