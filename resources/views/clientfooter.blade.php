@@ -17,7 +17,7 @@
            
             <div class="container text-center">
   <div class="row align-items-start">
-    <div class="col">
+    <div class="col col1">
      
     </div>
     <div class="col">
@@ -44,7 +44,7 @@
                 </div>
                
     </div>
-    <div class="col">
+    <div class="col col1">
      
     </div>
   </div>

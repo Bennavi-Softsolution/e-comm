@@ -133,3 +133,96 @@ table {
    td{
   color: red;
   }
+  .col1{
+    display:flex;
+  }
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 460px) {
+    .footer-top-frame {
+        height: 40vh; /* Adjust height for responsiveness */
+        margin-bottom: 1vh; /* Adjust margin as needed */
+        padding: 1vh;
+    }
+    .footer-bottom-frame {
+        height: 65vh; /* Adjust height for responsiveness */
+        padding: 2vh;
+    }
+    .align-row{
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 600;
+    }
+    .align-row div {
+        margin-bottom: 1vh;
+        margin-right: 0; /* Reset the margin-right */
+    }
+    h4{
+        margin-top: -4vh;
+        margin-bottom: -3vh;
+        align-items: center;
+    }
+    div.col1{
+        display: none;
+    }
+    .logo-position {
+        display: flex;
+        justify-content: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .icon-size {
+        height: 7vw; /* Increase icon size for visibility */
+        width: 7.8vw; /* Increase icon size for visibility */
+    }
+    .rowform {
+        justify-content: center;
+        text-align: center;
+        padding: 2vh;
+    }
+    .rowform p{
+        font-size: small;
+    }
+    .propertyicon{
+        height:1vh;
+        width: 1vh;
+    }
+    table {
+        margin-top: 5vh;
+    }
+    .subscribe {
+        font-size: 4vw; /* Adjust font size for better visibility */
+        padding-top: 3vh;
+    }
+
+    .form {
+        width: 100%; /* Adjust width for responsiveness */
+        margin: 0 auto; /* Center align the form */
+        color: white;
+    }
+
+    .btnsend {
+        width: 100%;
+        font-size: 3vw; /* Adjust font size for better visibility */
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
