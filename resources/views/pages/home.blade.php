@@ -53,13 +53,13 @@
                 <div class="container">
                     <ul id="myTab" class="nav flex-column nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#shoes">Shoes</a>
+                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="bi bi-bag"></i> Shoes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#watches">Watches</a>
+                            <a class="nav-link" href="#watches"><i class="bi bi-watch"></i> Watches</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#accessories">Accessories</a>
+                            <a class="nav-link" href="#accessories"><i class="bi bi-headphones"></i> Accessories</a>
                         </li>
                     </ul>
                 </div>
