@@ -14,10 +14,34 @@
 
         .sidebar {
             width: 200px;
+
         }
 
         .container {
             margin-left: 10px;
+        }
+
+        .nav-link {
+            color: #000;
+        }
+
+        .btn-custom {
+            background-color: #EE1313;
+            color: white;
+            /* Text color */
+            border-color: #EE1313;
+            /* Border color (optional) */
+        }
+
+        .btn-custom:hover,
+        .btn-custom:focus {
+            background: rgba(238, 19, 19, 0.2);
+            ;
+            /* Darker shade of red for hover/focus */
+            border-color: rgba(238, 19, 19, 0.2);
+            ;
+            /* Adjust border color accordingly */
+            color: white;
         }
     </style>
 
@@ -47,7 +71,7 @@
                         <div id="shoes" class="tab-pane fade show active">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($shoes as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -65,9 +89,26 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill"
+                                                            id="liveToastBtn">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
+                                                        <!-- Toast container -->
+                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                            <div id="liveToast" class="toast" role="alert"
+                                                                aria-live="assertive" aria-atomic="true">
+                                                                <div class="toast-header">
+                                                                    <img src="..." class="rounded me-2" alt="...">
+                                                                    <strong class="me-auto">Bootstrap</strong>
+                                                                    <small class="text-muted">11 mins ago</small>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="toast-body">
+                                                                    Hello, world! This is a toast message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -79,7 +120,7 @@
                         <div id="watches" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($watches as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -97,9 +138,26 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill"
+                                                            id="liveToastBtn">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
+                                                        <!-- Toast container -->
+                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                            <div id="liveToast" class="toast" role="alert"
+                                                                aria-live="assertive" aria-atomic="true">
+                                                                <div class="toast-header">
+                                                                    <img src="..." class="rounded me-2" alt="...">
+                                                                    <strong class="me-auto">Bootstrap</strong>
+                                                                    <small class="text-muted">11 mins ago</small>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="toast-body">
+                                                                    Hello, world! This is a toast message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +169,7 @@
                         <div id="accessories" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-xl-4 g-2">
                                 @foreach ($accessories as $product)
-                                    <div class="col mb-3">
+                                    <div class="col mb-1">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -129,9 +187,28 @@
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-primary rounded-pill">
+                                                        <a href="#" class="btn btn-custom rounded-pill"
+                                                            id="liveToastBtn">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
+                                                        <!-- Toast container -->
+                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                            <div id="liveToast" class="toast" role="alert"
+                                                                aria-live="assertive" aria-atomic="true">
+                                                                <div class="toast-header">
+                                                                    <img src="..." class="rounded me-2"
+                                                                        alt="...">
+                                                                    <strong class="me-auto">Bootstrap</strong>
+                                                                    <small class="text-muted">11 mins ago</small>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="toast"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="toast-body">
+                                                                    Hello, world! This is a toast message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,6 +232,13 @@
                 e.preventDefault();
                 $(this).tab('show');
             });
+        });
+        // JavaScript to show toast
+        var liveToastBtn = document.getElementById('liveToastBtn');
+        var liveToast = new bootstrap.Toast(document.getElementById('liveToast'));
+
+        liveToastBtn.addEventListener('click', function() {
+            liveToast.show();
         });
     </script>
 @endsection
