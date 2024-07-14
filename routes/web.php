@@ -62,7 +62,8 @@ Route::get('/order', function () {
 Route::get('/payment', function () {
     return view('pages/payment');
 });
-Route::get('/clientfooter', function () {
-    return view('clientfooter');
+
+Route::get('/admindashboard', function () {
+    return view('pages/admindashboard');
 });
 
