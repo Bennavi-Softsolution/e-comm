@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Home Page')
+
 @section('home')
     <style>
         /* Custom style for active nav-link */
@@ -14,7 +16,6 @@
 
         .sidebar {
             width: 200px;
-
         }
 
         .container {
@@ -22,29 +23,61 @@
         }
 
         .nav-link {
-            color: #000;
+            color: inherit;
         }
 
-        .btn-custom {
-            background-color: #EE1313;
-            color: white;
-            /* Text color */
-            border-color: #EE1313;
-            /* Border color (optional) */
+        .rating-stars {
+            color: #FFD700;
+            /* Default color for stars */
         }
 
-        .btn-custom:hover,
-        .btn-custom:focus {
-            background: rgba(238, 19, 19, 0.2);
-            ;
-            /* Darker shade of red for hover/focus */
-            border-color: rgba(238, 19, 19, 0.2);
-            ;
-            /* Adjust border color accordingly */
-            color: white;
+        /* Custom animations */
+        /* Custom animations */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-pills {
+            animation: slideInFromLeft 0.5s ease;
+        }
+
+        .nav-pills .nav-link {
+            position: relative;
+            color: inherit;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            margin-bottom: 10px;
+            text-decoration: none;
+            line-height: normal;
+        }
+
+        .nav-pills .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: rgba(238, 19, 19, 0);
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        .nav-pills .nav-link:hover::before,
+        .nav-pills .nav-link.active::before {
+            width: 100%;
+            background-color: rgba(238, 19, 19, 1);
+            /* Darker red for active and hover */
         }
     </style>
-
     <div class="container-fluid mt-3">
         <div class="row">
             <!-- Sidebar container (first column) -->
@@ -52,13 +85,13 @@
                 <div class="container">
                     <ul id="myTab" class="nav flex-column nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#shoes">Shoes</a>
+                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="bi bi-bag"></i> Shoes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#watches">Watches</a>
+                            <a class="nav-link" href="#watches"><i class="bi bi-watch"></i> Watches</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#accessories">Accessories</a>
+                            <a class="nav-link" href="#accessories"><i class="bi bi-headphones"></i> Accessories</a>
                         </li>
                     </ul>
                 </div>
@@ -82,33 +115,16 @@
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
                                                             <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2" alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,33 +147,16 @@
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
                                                             <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2" alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,35 +179,16 @@
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
                                                             <i
-                                                                class="fas fa-star {{ $i < $product->rating ? 'checked' : '' }}"></i>
+                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
                                                         <h5>KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill"
-                                                            id="liveToastBtn">
+                                                        <a href="#" class="btn btn-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
-                                                        <!-- Toast container -->
-                                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert"
-                                                                aria-live="assertive" aria-atomic="true">
-                                                                <div class="toast-header">
-                                                                    <img src="..." class="rounded me-2"
-                                                                        alt="...">
-                                                                    <strong class="me-auto">Bootstrap</strong>
-                                                                    <small class="text-muted">11 mins ago</small>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="toast"
-                                                                        aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="toast-body">
-                                                                    Hello, world! This is a toast message.
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,7 +204,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         $(document).ready(function() {
             // Initialize Bootstrap tabs
@@ -232,13 +212,6 @@
                 e.preventDefault();
                 $(this).tab('show');
             });
-        });
-        // JavaScript to show toast
-        var liveToastBtn = document.getElementById('liveToastBtn');
-        var liveToast = new bootstrap.Toast(document.getElementById('liveToast'));
-
-        liveToastBtn.addEventListener('click', function() {
-            liveToast.show();
         });
     </script>
 @endsection

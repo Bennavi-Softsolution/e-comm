@@ -35,16 +35,17 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('checkout', function () {
-    return view('checkout');
+Route::get('/checkout', function () {
+    return view('pages/checkout');
 });
 
-Route::get('address', function () {
+Route::get('/address', function () {
     return view('address');
 });  
 
 Route::get('/signup', function () {
     return view('signup');
+
 });
 
 Route::get('/manage-product', function () {
@@ -55,8 +56,8 @@ Route::get('/users', function () {
     return view('users');
 });
 
-Route::get('/order', function () {
-    return view('order');
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/payment', function () {
@@ -65,5 +66,9 @@ Route::get('/payment', function () {
 
 Route::get('/admindashboard', function () {
     return view('pages/admindashboard');
+
+Route::get('/clientfooter', function () {
+    return view('clientfooter');
 });
+
 
