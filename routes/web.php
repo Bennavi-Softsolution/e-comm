@@ -66,11 +66,8 @@ Route::get('/payment', function () {
 
 Route::get('/admindashboard', function () {
     return view('pages/admindashboard');
-<<<<<<< HEAD
 });
-=======
 
->>>>>>> b83503bfe4edb0d0717cde9a332d0606e2acd738
 Route::get('/clientfooter', function () {
     return view('clientfooter');
 });
