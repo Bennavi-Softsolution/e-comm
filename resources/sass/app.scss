@@ -1,0 +1,29 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.btn-custom {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #fff;
+    /* Text color */
+    --bs-btn-bg: #ee1313;
+    /* Red background color */
+    --bs-btn-border-color: #ee1313;
+    /* Border color */
+    --bs-btn-hover-color: #fff;
+    /* Text color on hover */
+    --bs-btn-hover-bg: rgba(238, 19, 19, 0.2);
+    /* Darker red on hover */
+    --bs-btn-hover-border-color: rgba(238, 19, 19, 0.2);
+    /* Darker border color on hover */
+    --bs-btn-focus-shadow-rgb: #ee1313;
+    /* Focus shadow color */
+    --bs-btn-active-color: #fff;
+    /* Text color when active */
+    --bs-btn-active-bg: #a10808;
+    /* Darker red when active */
+    --bs-btn-active-border-color: #a10808;
+    /* Darker border color when active */
+
+    // Transition for smooth state changes
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
