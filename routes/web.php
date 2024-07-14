@@ -60,6 +60,14 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/payment', function () {
+    return view('pages/payment');
+});
+
+Route::get('/admindashboard', function () {
+    return view('pages/admindashboard');
+});
+
 Route::get('/clientfooter', function () {
     return view('clientfooter');
 });
