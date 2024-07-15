@@ -25,10 +25,10 @@ Route::get('/navbar', function () {
 });
 
 Route::get('/product', function () {
-    return view('product');
+    return view('pages/product');
 });
 Route::get('/navbar', function () {
-    return view('navbar');
+    return view('pages/navbar');
 });
 
 Route::get('/cart', function () {
@@ -52,7 +52,7 @@ Route::get('/manage-product', function () {
     return view('manage-product');
 });
 Route::get('/select-location', function () {
-    return view('select-location');
+    return view('pages/select-location');
 });
 
 Route::get('/users', function () {
@@ -73,6 +73,10 @@ Route::get('/admindashboard', function () {
 
 Route::get('/clientfooter', function () {
     return view('clientfooter');
+});
+
+Route::get('/adminfooter', function () {
+    return view('adminfooter');
 });
 
 
