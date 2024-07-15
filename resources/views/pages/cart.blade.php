@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('title', 'shopping cart')
+
 <?php
 session_start();
 
@@ -47,15 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('../css/cart.css') }}" >
-</head>
+
 <body>
     <div class="cart mt-4">
         <div class="added-to-basket">
@@ -92,8 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </a>
                 </div>
                 <button class="remove btn btn-danger ms-3">
-                    <i class="bi bi-trash"></i>
-                    <img src="{{ asset('../images/remove.jpg') }}"> REMOVE</button>
+                    <i class="bi bi-trash"></i> REMOVE</button>
             </div>
         </div>
 
@@ -309,4 +304,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         });
     </script>
 </body>
-</html>
+
