@@ -44,4 +44,8 @@ Route::get('/order', function () {
     return view('order');
 });
 
+Route::get('/adminfooter', function () {
+    return view('adminfooter');
+});
+
 
