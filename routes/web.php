@@ -75,4 +75,8 @@ Route::get('/clientfooter', function () {
     return view('clientfooter');
 });
 
+Route::get('/adminfooter', function () {
+    return view('adminfooter');
+});
+
 
