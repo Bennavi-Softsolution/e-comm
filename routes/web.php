@@ -60,7 +60,7 @@ Route::get('/users', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('pages/login');
 });
 
 Route::get('/payment', function () {

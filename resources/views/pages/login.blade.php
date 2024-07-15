@@ -2,7 +2,7 @@
 
 @section('title', 'address')
 
-    <style>
+<style>
         body {
             display: flex;
             justify-content: center;
@@ -48,6 +48,8 @@
         <input type="text" class="form-control login-input" placeholder="Enter email or phone number">
         <input type="password" class="form-control login-input" placeholder="Enter Password">
         <div class="button-container">
-            <button class="btn login-button">LOGIN</button>
+            <button class="btn btn-custom login-button">LOGIN</button>
         </div>
     </div>
+
+    
