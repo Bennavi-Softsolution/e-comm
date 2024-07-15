@@ -1,80 +1,80 @@
 @extends('layouts.app')
-
+@extends('layouts.navbar')
 @section('title', 'Checkout')
-<style>
-    /* Custom CSS for animations */
-    @keyframes slideInFromLeft {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
+
+@section('checkout')
+    <style>
+        /* Custom CSS for animations */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .slide-in-from-left {
-        animation: slideInFromLeft 0.5s ease-out;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
+        .slide-in-from-left {
+            animation: slideInFromLeft 0.5s ease-out;
         }
 
-        100% {
-            opacity: 1;
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
-    }
 
-    .fade-in {
-        animation: fadeIn 0.5s ease-out;
-    }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
 
-    /* Custom modal animation */
-    .modal.fade .modal-dialog {
-        transform: translate(0, -50%);
-        transition: transform 0.3s ease-out;
-    }
+        /* Custom modal animation */
+        .modal.fade .modal-dialog {
+            transform: translate(0, -50%);
+            transition: transform 0.3s ease-out;
+        }
 
-    .modal.fade.show .modal-dialog {
-        transform: translate(0, 0);
-    }
+        .modal.fade.show .modal-dialog {
+            transform: translate(0, 0);
+        }
 
-    /* Custom button hover effect */
-    .btn-custom-effect {
-        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-    }
+        /* Custom button hover effect */
+        .btn-custom-effect {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
 
-    .btn-custom-effect:hover {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        .btn-custom-effect:hover {
+            transform: scale(1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Custom input focus effect */
-    .form-control-custom {
-        transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
-    }
+        /* Custom input focus effect */
+        .form-control-custom {
+            transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
 
-    .form-control-custom:focus {
-        border-color: #EE1313;
-        box-shadow: 0 0 0 0.2rem rgba(238, 19, 19, 0.25);
-    }
+        .form-control-custom:focus {
+            border-color: #EE1313;
+            box-shadow: 0 0 0 0.2rem rgba(238, 19, 19, 0.25);
+        }
 
-    .payment-card {
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+        .payment-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
 
-    .payment-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    }
-</style>
-</head>
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 
-<body>
     <div class="container mt-4">
         <div class="card mb-4 slide-in-from-left fade-in">
             <div class="card-body">
@@ -291,5 +291,4 @@
         });
     </script>
 
-
-</body>
+@endsection

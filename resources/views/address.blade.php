@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+@extends('layouts.app')
+
+@section('title', 'address')
+
     <style>
         .bg-custom-red {
             background-color: #EE1313;
@@ -39,8 +36,8 @@
             </div>
             <div class="col-auto">
                 <div class="dropdown">
-                    <button class="btn bg-custom-black text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img aria-hidden="true" alt="dropdown" src="https://openui.fly.dev/openui/16x16.svg?text=▼" />
+                    <button class="btn bg-custom-black btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -59,8 +56,7 @@
             </div>
             <div class="col-auto">
                 <div class="dropdown">
-                    <button class="btn bg-custom-black text-white dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img aria-hidden="true" alt="dropdown" src="https://openui.fly.dev/openui/16x16.svg?text=▼" />
+                    <button class="btn bg-custom-black btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                         <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -81,8 +77,8 @@
             </div>
             <div class="col-auto">
                 <div class="dropdown">
-                    <button class="btn bg-custom-black text-white dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img aria-hidden="true" alt="dropdown" src="https://openui.fly.dev/openui/16x16.svg?text=▼" />
+                    <button class="btn bg-custom-black btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                        
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                         <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -98,8 +94,8 @@
             </div>
             <div class="col-auto">
                 <div class="dropdown">
-                    <button class="btn bg-custom-black text-white dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img aria-hidden="true" alt="dropdown" src="https://openui.fly.dev/openui/16x16.svg?text=▼" />
+                    <button class="btn bg-custom-black  btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                        
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
                         <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -111,12 +107,6 @@
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <button class="btn bg-custom-red text-white font-bold save-button">SAVE</button>
+        <button class="btn bg-custom-red btn-custom text-white font-bold save-button">SAVE</button>
     </div>
 </div>
-
-<!-- Bootstrap 5 JS via CDN -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
