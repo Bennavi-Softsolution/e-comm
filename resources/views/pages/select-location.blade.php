@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Location Module</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+@extends('layouts.app')
+
+@section('title', 'Select Location Modal')
+
   <style>
     .cont-custom{
         background-color: #f0f0f0;
@@ -41,10 +37,9 @@
         background-color: #EE1313;
         color: #fff;
         height: 4vh;
-        width: 30vh;
-        margin-left: 23%;
+        width: 10vh;
         background: #EE1313;
-        border-radius: 10px;
+        border-radius: 30px;
         border: none;
 
     }
@@ -158,10 +153,7 @@
 
     </div>
     <div class="mb-3 ">
-    <button class="btn btn-select-location w-100">SELECT PICK-UP LOCATION</button>
+    <button class="btn-custom btn-select-location w-100">SELECT PICK-UP LOCATION</button>
 </div>
   </div>
 </div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
