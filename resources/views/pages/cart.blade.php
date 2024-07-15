@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p2.jpg') }}" alt="GripMax">
-                                <h3>GripMax Trail Hiking Boots. waterproof</h3>
+                                <h4>GripMax Trail Hiking Boots. waterproof</h4>
                                 <p>Durable and rugged boots designed for the toughest trails.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p8.jpg') }}" alt="VentureTrack">
-                                <h3>VentureTrack Trail Running Shoes</h3>
+                                <h4>VentureTrack Trail Running Shoes</h4>
                                 <p>Lightweight and comfortable shoes perfect for trail running.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -147,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/sneakers.jpg') }}" alt="Sneakers">
-                                <h3>Men's casual sneakers white shoes</h3>
+                                <h4>Men's casual sneakers white shoes</h4>
                                 <p>Stylish and comfortable sneakers for everyday wear.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </div>
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p3.jpg') }}" alt="UrbanFlex">
-                                <h3>UrbanFlex Laced Official Shoe</h3>
+                                <h4>UrbanFlex Laced Official Shoe</h4>
                                 <p>Perfect shoes for a professional look and comfortable fit.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -184,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p21.jpg') }}" alt="OfficialShoe">
-                                <h3>Mens Black Laced Official Shoe</h3>
+                                <h4>Mens Black Laced Official Shoe</h4>
                                 <p>Elegant and comfortable black laced shoe for formal occasions.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </div>
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p4.jpg') }}" alt="OfficialShoe">
-                                <h3>Mens Brown Laced Official Shoe</h3>
+                                <h4>Mens Brown Laced Official Shoe</h4>
                                 <p>Stylish and durable brown laced shoe for formal occasions.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -221,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p7.jpg') }}" alt="TrekkingSandals">
-                                <h3>SummitVenture Trekking Sandals</h3>
+                                <h4>SummitVenture Trekking Sandals</h3>
                                 <p>Durable and comfortable sandals for trekking and hiking.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -237,7 +237,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </div>
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p20.jpg') }}" alt="CasualSneakers">
-                                <h3>Casual Sneakers Sport Shoes</h3>
+                                <h4>Casual Sneakers Sport Shoes</h3>
                                 <p>Versatile and stylish sneakers for casual and sporty outfits.</p>
                                 <div class="rating">
                                     <span class="star">&#9733;</span>
@@ -297,7 +297,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 interval: 5000
             });
         });
-
+        
         // Close button functionality for the added-to-basket section
         document.querySelector('.added-to-basket .close').addEventListener('click', function() {
             document.querySelector('.added-to-basket').style.display = 'none';
