@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
 
+
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/product', function () {
     return view('product');
@@ -25,23 +24,55 @@ Route::get('/navbar', function () {
     return view('navbar');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
+Route::get('/product', function () {
+    return view('pages/product');
+});
+Route::get('/navbar', function () {
+    return view('pages/navbar');
 });
 
-Route::get('checkout', function () {
-    return view('checkout');
+Route::get('/cart', function () {
+    return view('pages/cart');
 });
+
+Route::get('/checkout', function () {
+    return view('pages/checkout');
+});
+
+Route::get('/address', function () {
+    return view('address');
+});  
 
 Route::get('/signup', function () {
     return view('signup');
+
 });
+
+Route::get('/manage-product', function () {
+    return view('manage-product');
+});
+Route::get('/select-location', function () {
+    return view('pages/select-location');
+});
+
 Route::get('/users', function () {
     return view('users');
 });
 
-Route::get('/order', function () {
-    return view('order');
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/payment', function () {
+    return view('pages/payment');
+});
+
+Route::get('/admindashboard', function () {
+    return view('pages/admindashboard');
+});
+
+Route::get('/clientfooter', function () {
+    return view('clientfooter');
 });
 
 Route::get('/adminfooter', function () {

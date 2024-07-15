@@ -7,15 +7,18 @@
 
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet" >
     <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" >
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body> 
   
 <div class="container text-center">
 <div class="row">
     <div class="col-8">
+          <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search">
+              <button class="search-button"><i class="fas fa-search"></i></button>
+          </div>
 
-   
      
     </div>
     <div class="col-4">
@@ -26,10 +29,10 @@
 </div>
               
     <div>
-    <table class="table">
-  <thead class="custom-tablehead">
+    <table class="table table-hover table-responsive"  >
+  <thead class=" tablehead custom-tablehead" id="tableHead">
     <tr>
-      <th class="custom-th" scope="col" class="tablehead">Name</th>
+      <th class="custom-th" scope="col">Name</th>
       <th class="custom-th" scope="col">Passwords</th>
       <th class="custom-th" scope="col">Email</th>
       <th class="custom-th" scope="col">City</th>
@@ -112,7 +115,7 @@
     <div class="container text-center">
   <div class="row">
     <div class="col">
-    <button type="button" class="btn btn-danger">Showing page 1 of 10</button>
+    <div class="info-card">Showing 1 of 10 pages</div>
     </div>
     <div class="col">
 
