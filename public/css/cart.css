@@ -95,7 +95,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 350px;
+    width: 300px;
 }
 .product-item img {
     width: 100%;
@@ -109,6 +109,7 @@ body {
 .product-item h3 {
     margin-top: 0;
 }
+
 .product-item .price-and-cart {
     display: flex;
     justify-content: space-between;
