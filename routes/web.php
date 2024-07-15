@@ -51,6 +51,9 @@ Route::get('/signup', function () {
 Route::get('/manage-product', function () {
     return view('manage-product');
 });
+Route::get('/select-location', function () {
+    return view('select-location');
+});
 
 Route::get('/users', function () {
     return view('users');
