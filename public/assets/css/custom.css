@@ -3,7 +3,11 @@
     background-color: red;
     color: white;
 }
+#tableHead{
+    background-color: red;
+    color: white;
 
+}
 /* Name Column Styling */
 .table th[scope="row"] {
     font-weight: 400; /* Light font weight */
@@ -51,7 +55,7 @@
 
 /* Style for the search input field */
 .search-input {
-    width: 20vw; /* Width using viewport width */
+    width: vw; /* Width using viewport width */
     padding: 1.5vh 2vw; /* Padding using viewport height and width */
     border: none;
     border-top-left-radius: 15px;
@@ -84,4 +88,13 @@
 .search-input::placeholder {
     color: white;
     opacity: 0.7; /* Adjust opacity as needed */
+}
+.info-card {
+    background-color: red;
+    color: white;
+    padding: 2vh 4vw; /* Padding using viewport height and width */
+    border-radius: 10px; /* Slightly rounded corners */
+    font-size: 1.5vw; /* Font size using viewport width */
+    display: inline-block; /* Ensure it only takes as much space as necessary */
+    margin: 1vh 0; /* Margin using viewport height */
 }
