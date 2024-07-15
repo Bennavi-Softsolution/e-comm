@@ -35,22 +35,40 @@
     display: flex;
     gap: 10px;
 }
+.button-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.button-container a {
+      text-decoration: none;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 18px;
+      color: #FFFFFF;
+      
+
+
+    }
 
 .btn {
     color: white;
     font-weight: bold;
 }
 
-.cart-button {
+.cart-button, .buy-button {
     background-color: #EE1313;
+    border-radius: 3px;
+    width: 16vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.buy-button {
-    background-color: #EE1313;
-}
-
-.cart-button:hover,
-.buy-button:hover {
+.cart-button:hover, .buy-button:hover {
     opacity: 0.8;
     background-color: #EE1313;
 }
@@ -114,8 +132,8 @@
             </div>
             </div>
             <div class="button-container mt-3">
-                <a href="#" class="btn buy-button btn-warning shadow-0">Buy now</a>
-                <a href="#" class="btn cart-button btn-primary shadow-0"><i class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
+                <a href="#" class="btn-primary buy-button text-white ">Buy now</a>
+                <a href="#" class="btn-primary cart-button text-white "><i class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
             </div>
          </div>
         </div>
