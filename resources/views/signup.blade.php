@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-
 <div class="container">
     <form id="signup-form">
         <div class="form-group row">
-
         </div>
         <div class="form-group row">
             <label for="inputFullName" class="mb-3 col-sm-2 col-form-label">Full Name</label>
