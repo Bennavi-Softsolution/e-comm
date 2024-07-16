@@ -151,6 +151,8 @@
                                                 <h5 class="card-title">Pay Now</h5>
                                                 <p class="card-text">Pay immediately using your preferred payment
                                                     method.</p>
+                                                    <img src="{{ asset('images/payment-forms.png') }}" class="card-img-top"
+                                                alt="an image">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="paymentMethod"
                                                         id="payNowRadio" value="payNow">
@@ -167,6 +169,8 @@
                                                 <h5 class="card-title">Pay on Delivery</h5>
                                                 <p class="card-text">Pay when your order is delivered to your doorstep.
                                                 </p>
+                                                <img src="{{ asset('images/payment-forms.png') }}" class="card-img-top"
+                                                alt="an image">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="paymentMethod"
                                                         id="payOnDeliveryRadio" value="payOnDelivery">
