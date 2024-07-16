@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div>
-                    <a href="#" class="text-primary">
+                    <a href="#" class="text-danger">
                         Available offer to save you money</di>
                     </a>
                 </div>
@@ -127,8 +127,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 1,799</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 1,799</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
 
@@ -144,8 +144,8 @@
                                     <span class="star">&#9733;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 7,999</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 7,999</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -167,8 +167,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 2,999</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 2,999</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="product-item me-3">
@@ -183,8 +183,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 1,499</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 1,499</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -204,8 +204,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 2,499</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 2,499</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="product-item me-3">
@@ -220,8 +220,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 2,499</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 2,499</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -241,8 +241,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 9,999</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 9,999</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="product-item me-3">
@@ -257,8 +257,8 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <div class="price-and-cart">
-                                    <p><strong>Price:</strong> KES 2,999</p>
-                                    <button class="add-to-cart btn btn-primary">Add to Cart</button>
+                                    <p><strong>Price:</strong> KES 2,999</p> &nbsp;
+                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
                                 </div>
                             </div>
                         </div>

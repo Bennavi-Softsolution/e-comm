@@ -36,7 +36,7 @@ Route::get('/cart', function () {
 });
 
 Route::get('/checkout', function () {
-    return view('pages/checkout');
+    return view('pages.checkout');
 });
 
 Route::get('/address', function () {
@@ -57,6 +57,10 @@ Route::get('/select-location', function () {
 
 Route::get('/users', function () {
     return view('users');
+});
+
+Route::get('/deliveries', function () {
+    return view('deliveries');
 });
 
 Route::get('/login', function () {
@@ -82,6 +86,3 @@ Route::get('/adminfooter', function () {
 Route::get('/order', function () {
     return view('order');
 });
-
-
-
