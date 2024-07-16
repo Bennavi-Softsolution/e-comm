@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('layouts.navbar')
 @section('title', 'Home Page')
 
 @section('home')
@@ -77,13 +77,41 @@
             background-color: rgba(238, 19, 19, 1);
             /* Darker red for active and hover */
         }
+
+
+        @media (max-width: 768px) {
+
+            /* For mobile phones and smaller tablets */
+            [class*="col-"] {
+                width: 100%;
+            }
+
+            .scrollable-sidebar {
+                overflow-x: auto;
+                /* Enable horizontal scrolling */
+                white-space: nowrap;
+                /* Prevent items from wrapping */
+                -webkit-overflow-scrolling: touch;
+                /* Smooth scrolling on iOS */
+                padding-bottom: 10px;
+                /* Add some bottom padding for space */
+            }
+
+            .nav-pills .nav-link {
+                display: inline-block;
+                /* Display links inline */
+                padding-right: 10px;
+                /* Add some spacing between items */
+                padding-left: 10px;
+            }
+        }
     </style>
     <div class="container-fluid mt-3">
         <div class="row">
             <!-- Sidebar container (first column) -->
-            <div class="col-md-3 sidebar">
-                <div class="container">
-                    <ul id="myTab" class="nav flex-column nav-pills">
+            <div class="col-md-3 col-12 sidebar">
+                <div class="scrollable-sidebar">
+                    <ul id="myTab" class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#shoes"><i class="bi bi-bag"></i> Shoes</a>
                         </li>
@@ -93,6 +121,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#accessories"><i class="bi bi-headphones"></i> Accessories</a>
                         </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -204,7 +234,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize Bootstrap tabs
