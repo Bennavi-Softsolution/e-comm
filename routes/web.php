@@ -83,3 +83,6 @@ Route::get('/adminfooter', function () {
     return view('adminfooter');
 });
 
+Route::get('/order', function () {
+    return view('order');
+});
