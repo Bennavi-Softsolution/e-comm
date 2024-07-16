@@ -37,6 +37,20 @@
     .icon-custom {
         margin-left: 20px;
     }
+
+     /* Ensuring icons are aligned properly */
+     .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .icons a {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 20px;
+    }
+
 </style>
 
 
