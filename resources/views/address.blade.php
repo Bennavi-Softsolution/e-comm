@@ -26,7 +26,9 @@
     </style>
 </head>
 <body>
-<div class="container py-4">
+    <div class="card">
+  <div class="card-body">
+  <div class="container py-4">
     <div class="p-4">
         <input type="text" placeholder="First Name" class="form-control custom-input placeholder-white" />
         <input type="text" placeholder="Last Name" class="form-control custom-input placeholder-white" />
@@ -109,4 +111,7 @@
     <div class="d-flex justify-content-center">
         <button class="btn bg-custom-red btn-custom text-white font-bold save-button">SAVE</button>
     </div>
+</div>
+
+  </div>
 </div>
