@@ -59,6 +59,10 @@ Route::get('/users', function () {
     return view('users');
 });
 
+Route::get('/deliveries', function () {
+    return view('deliveries');
+});
+
 Route::get('/login', function () {
     return view('pages/login');
 });
@@ -78,5 +82,4 @@ Route::get('/clientfooter', function () {
 Route::get('/adminfooter', function () {
     return view('adminfooter');
 });
-
 
