@@ -23,6 +23,8 @@
         border-right: 3px solid red; */
         }
 
+
+
         .quantity-input {
             max-width: 50px;
             /* Adjust width as needed */
@@ -31,11 +33,23 @@
         border-bottom: 3px solid red; */
         }
 
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
+
+        
+
+
+.cart-button, .buy-button {
+    background-color: #EE1313;
+    border-radius: 3px;
+    width: 16vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-button:hover, .buy-button:hover {
+    opacity: 0.8;
+    background-color: #EE1313;
+}
 
         .btn {
             color: white;
@@ -49,6 +63,7 @@
         .buy-button {
             background-color: #EE1313;
         }
+
 
         .cart-button:hover,
         .buy-button:hover {
@@ -126,6 +141,13 @@
                         </div>
                     </div>
             </div>
+
+            <div class="button-container mt-3">
+                <a href="#" class="btn-primary buy-button text-white ">Buy now</a>
+                <a href="#" class="btn-primary cart-button text-white "><i class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
+            </div>
+         </div>
+
         </div>
         </div>
         </main>

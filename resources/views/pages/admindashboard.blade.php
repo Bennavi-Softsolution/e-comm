@@ -55,7 +55,6 @@
         }
         .sidebar a:hover {
             background-color: grey !important;
-            padding: 10px;
         }
         .sidebar a.active {
             background-color: blue !important;
@@ -110,7 +109,7 @@
                     <div class="card-header">
                         Total Revenue in:
                         <div class="dropdown">
-                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown"  aria-expanded="false">
                                 24 HRS
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -209,7 +208,7 @@
 
     <!-- jQuery and Bootstrap JS dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-   
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Chart.js example charts
