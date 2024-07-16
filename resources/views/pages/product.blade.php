@@ -121,7 +121,7 @@
                         </div>
                         <div class="button-container mt-3">
                             <a href="#" class="btn buy-button btn-warning shadow-0">Buy now</a>
-                            <a href="#" class="btn cart-button btn-primary shadow-0"><i
+                            <a href="#" class="btn cart-button btn-danger shadow-0"><i
                                     class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
                         </div>
                     </div>
