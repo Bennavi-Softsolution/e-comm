@@ -36,10 +36,10 @@
     }
 </style>
 
-<!--Main Contenet-->
+<!--Main Content-->
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             E-<span>Commerce</span>.site
         </a>
         <div class="input-group from-custom mx-auto">
