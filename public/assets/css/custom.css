@@ -92,3 +92,113 @@ table {
     display: inline-block; /* Ensure it only takes as much space as necessary */
     margin: 1vh 0; /* Margin using viewport height */
 }
+/* For devices with width up to 460px */
+@media (max-width: 460px) {
+    .container {
+        width: 5em;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: flex-start;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .col-4, .col-8 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align:right;
+    }
+
+    .col-4 img {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .search-container {
+        flex-direction: row;
+        width: 40%;
+        margin: 2vh 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input, .search-button {
+        font-size: 4vw;
+        height: 6vh;
+    }
+
+    .search-input {
+        flex: 1;
+    }
+
+    .search-button {
+        flex-shrink: 0;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .info-card {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .borderstyle {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        width: 100%;
+    }
+
+    table.vamos th, table.vamos td {
+        display: table-cell;
+        padding: 1vh 1vw;
+    }
+
+    table.vamos th {
+        white-space: nowrap;
+    }
+
+    table.vamos th:nth-child(2),
+    table.vamos td:nth-child(2),
+    table.vamos th:nth-child(3),
+    table.vamos td:nth-child(3),
+    table.vamos th:nth-child(5),
+    table.vamos td:nth-child(5),
+    table.vamos th:nth-child(6),
+    table.vamos td:nth-child(6) {
+        white-space: nowrap;
+    }
+
+    .bottom-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1vh;
+        text-align: left;
+    }
+
+    .bottom-container .info-card {
+        display: inline-block;
+    }
+
+    .bottom-container .borderstyle {
+        display: block;
+        margin-top: 1vh;
+        width: 20%;
+    }
+    .info-card{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+}

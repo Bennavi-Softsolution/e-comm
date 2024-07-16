@@ -18,12 +18,9 @@
           <div class="search-container">
               <input type="text" class="search-input" placeholder="Search">
               <button class="search-button"><i class="fas fa-search"></i></button>
-          </div>
-
-     
+          </div>  
     </div>
     <div class="col-4">
-
       <img src="{{asset('assets/images/logo.jpg')}}" alt="Logo">
     </div>
   </div>
@@ -95,14 +92,14 @@
       <td> <img src="{{asset('assets/images/Red star.png')}}" alt="status image"></td>
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
     </tr>
-    <!-- <tr class="tr-color">
+    <tr class="tr-color">
       <td> <img src="{{asset('assets/images/male avator.png')}}" alt="status image">Ian Fortune</td>
       <td>QGT3768</td>
       <td>fortune@gmail.com</td>
       <td>Nyeri</td>
       <td> <img src="{{asset('assets/images/Green star.png')}}" alt="status image"></td>
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
-    </tr> -->
+    </tr> 
 </table>
     </div>
     </div>
