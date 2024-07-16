@@ -1,5 +1,3 @@
-
-
 <style>
     .navbar-custom {
         background-color: #D9D9D9 !important;

@@ -36,7 +36,7 @@ Route::get('/cart', function () {
 });
 
 Route::get('/checkout', function () {
-    return view('pages/checkout');
+    return view('pages.checkout');
 });
 
 Route::get('/address', function () {
