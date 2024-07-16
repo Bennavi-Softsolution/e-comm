@@ -17,7 +17,7 @@
 <body>
     <!-- Content of your body -->
     @yield('home')
-
+    
    
 </body>
 

@@ -1,4 +1,3 @@
-@extends('layouts.app')
 
 
 <style>
@@ -110,9 +109,6 @@
 </div>
 <!-- Sign in modal ends here -->
 
-
-
-@yield('home')
 @yield('cart')
 @yield('checkout')
 @yield('product')
