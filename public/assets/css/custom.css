@@ -155,7 +155,7 @@ table {
     .borderstyle {
         font-size: 3.5vw;
         margin: 1vh 0;
-        width: 100%;
+        width: 50%;
     }
 
     table.vamos th, table.vamos td {
@@ -264,7 +264,7 @@ table {
     .borderstyle {
         font-size: 2.5vw;
         margin: 1vh 0;
-        width: 100%;
+        width: 40%;
     }
 
     table.vamos th, table.vamos td {
@@ -308,5 +308,9 @@ table {
     .info-card, .btn {
         display: block;
     }
+    .col-4 img {
+        display: none;
+    }
+
 }
 
