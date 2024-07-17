@@ -83,15 +83,15 @@ padding-bottom: 4vh;
    
 }
 .company{
-    color: red;
+    color: #ee1313;
     font-size: 0.6vw;
 }
 .tb{
     background-color: black;
-    color: red;
+    color: #ee1313;
 }
 .btnsend{
-    background-color: red;
+    background-color: #ee1313;
     color: white;
 }
 .rightside{
@@ -131,7 +131,7 @@ table {
     text-align: left;
     }
    td{
-  color: red;
+  color: #ee1313;
   }
   .col1{
     display:flex;
