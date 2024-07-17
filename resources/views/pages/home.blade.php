@@ -7,16 +7,16 @@
         /* Custom sidebar and nav-pills styles */
         .sidebar {
             width: 240px;
-            padding: 20px;
-            border-right: 1px solid #ddd;
-            /* Light border on the right */
-            transition: width 0.3s ease, padding 0.3s ease;
-            /* Transition for width and padding */
+            padding: 20px;          
+            transition: all 0.3s ease;
+            /* Transition for width, padding, background, and box-shadow */
+            box-shadow: 0 0 5px rgba(129, 110, 110, 0.3); /* Subtle shadow */
+            border-radius: 14px; /* Rounded corners */
         }
 
         .sidebar:hover {
-            width: 260px;
-            padding: 25px;
+            transform: translateX(5px); /* Move sidebar slightly to the right on hover */
+            box-shadow: 0 0 5px rgba(129, 110, 110, 0.3); /* Darker shadow on hover */
         }
 
         .scrollable-sidebar {
@@ -39,22 +39,20 @@
         }
 
         .nav-pills .nav-link:hover {
-            background-color: #e9ecef;
+            background-color: #e4e4e4;
             color: #3b3b3b;
         }
 
         .nav-pills .nav-link.active {
-            background-color: #474747;
+            background-color: #ee1313;
             color: #fff;
-            border-color: #007bff;
+            border-color: #ee1313;
         }
 
         #myTab.nav-pills {
             display: flex;
             flex-direction: column;
         }
-
-
 
         @media (max-width: 768px) {
             .sidebar {
@@ -68,8 +66,6 @@
                 flex-wrap: nowrap;
                 /* Ensures items do not wrap on smaller screens */
             }
-
-
         }
 
         .rating-stars {
@@ -86,6 +82,7 @@
             /* Enable smooth scrolling on iOS */
         }
     </style>
+
     <div class="container-fluid mt-3">
         <div class="row">
             <!-- Sidebar container (first column) -->
@@ -93,8 +90,7 @@
                 <div class="scrollable-sidebar">
                     <ul id="myTab" class="nav nav-pills gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i>
-                                Shoes</a>
+                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i> Shoes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#watches"><i class="fas fa-clock"></i> Watches</a>
@@ -103,14 +99,12 @@
                             <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#other"><i class="bi bi-shuffle"></i></i> Other</a>
+                            <a class="nav-link" href="#other"><i class="bi bi-shuffle"></i> Other</a>
                         </li>
                         <!-- Add more items as needed -->
                     </ul>
                 </div>
             </div>
-
-
 
             <!-- Main content container (second column) -->
             <div class="col-md-9">
