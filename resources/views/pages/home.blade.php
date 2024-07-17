@@ -132,7 +132,7 @@
                 <div class="container-fluid">
                     <div class="tab-content">
                         <div id="shoes" class="tab-pane fade show active">
-                            <div class="row row-cols-1 row-cols-xl-4 g-2">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($shoes as $product)
                                     <div class="col mb-1">
                                         <div class="card h-100">
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <div id="watches" class="tab-pane fade">
-                            <div class="row row-cols-1 row-cols-xl-4 g-2">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($watches as $product)
                                     <div class="col mb-1">
                                         <div class="card h-100">
@@ -196,7 +196,7 @@
                             </div>
                         </div>
                         <div id="accessories" class="tab-pane fade">
-                            <div class="row row-cols-1 row-cols-xl-4 g-2">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($accessories as $product)
                                     <div class="col mb-1">
                                         <div class="card h-100">
