@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@extends('pages.admindashboard')
+
 
 @section('manage-product')
 
@@ -67,4 +67,4 @@
     </table>
 </div>
 
-@endsection
+
