@@ -4,106 +4,63 @@
 
 @section('home')
     <style>
-        /* Custom style for active nav-link */
-        .nav-pills .nav-link.active {
-            background-color: red;
-            /* Change background color */
-            color: white;
-            /* Change text color */
-            border-color: red;
-            /* Change border color (optional) */
-        }
-
+        /* Custom sidebar and nav-pills styles */
         .sidebar {
-            width: 200px;
+            width: 240px;
+            
+            padding: 20px;
+            border-right: 1px solid #ddd; /* Light border on the right */
+            transition: width 0.3s ease, padding 0.3s ease; /* Transition for width and padding */
         }
 
-        .container {
-            margin-left: 10px;
+        .sidebar:hover {
+            width: 260px;
+            padding: 25px;
         }
 
-        .nav-link {
-            color: inherit;
-        }
-
-        .rating-stars {
-            color: #FFD700;
-            /* Default color for stars */
-        }
-
-        /* Custom animations */
-        /* Custom animations */
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .nav-pills {
-            animation: slideInFromLeft 0.5s ease;
+        .scrollable-sidebar {
+            overflow-y: auto;
+            max-height: calc(100vh - 120px); /* Adjust based on your layout */
         }
 
         .nav-pills .nav-link {
-            position: relative;
-            color: inherit;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-            margin-bottom: 10px;
-            text-decoration: none;
-            line-height: normal;
+            color: #495057;
+            padding: 10px 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .nav-pills .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: rgba(238, 19, 19, 0);
-            transition: width 0.3s ease, background-color 0.3s ease;
+        .nav-pills .nav-link i {
+            margin-right: 10px;
         }
 
-        .nav-pills .nav-link:hover::before,
-        .nav-pills .nav-link.active::before {
-            width: 100%;
-            background-color: rgba(238, 19, 19, 1);
-            /* Darker red for active and hover */
+        .nav-pills .nav-link:hover {
+            background-color: #e9ecef;
+            color: #3b3b3b;
         }
 
+        .nav-pills .nav-link.active {
+            background-color: #474747;
+            color: #fff;
+            border-color: #007bff;
+        }
 
         @media (max-width: 768px) {
-
-            /* For mobile phones and smaller tablets */
-            [class*="col-"] {
+            .sidebar {
                 width: 100%;
-            }
-
-            .scrollable-sidebar {
-                overflow-x: auto;
-                /* Enable horizontal scrolling */
-                white-space: nowrap;
-                /* Prevent items from wrapping */
-                -webkit-overflow-scrolling: touch;
-                /* Smooth scrolling on iOS */
-                padding-bottom: 10px;
-                /* Add some bottom padding for space */
+                padding: 10px;
             }
 
             .nav-pills .nav-link {
-                display: inline-block;
-                /* Display links inline */
-                padding-right: 10px;
-                /* Add some spacing between items */
-                padding-left: 10px;
+                padding: 8px 16px;
             }
+        }
+
+        .rating-stars {
+            color: #ffd700;
+            /* Default color for stars */
         }
     </style>
     <div class="container-fluid mt-3">
@@ -111,18 +68,17 @@
             <!-- Sidebar container (first column) -->
             <div class="col-md-3 col-12 sidebar">
                 <div class="scrollable-sidebar">
-                    <ul id="myTab" class="nav nav-pills">
+                    <ul id="myTab" class="nav nav-pills flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="bi bi-bag"></i> Shoes</a>
+                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i> Shoes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#watches"><i class="bi bi-watch"></i> Watches</a>
+                            <a class="nav-link" href="#watches"><i class="fas fa-clock"></i> Watches</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#accessories"><i class="bi bi-headphones"></i> Accessories</a>
+                            <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
                         </li>
-
-
+                        <!-- Add more items as needed -->
                     </ul>
                 </div>
             </div>
@@ -134,7 +90,7 @@
                         <div id="shoes" class="tab-pane fade show active">
                             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($shoes as $product)
-                                    <div class="col mb-1">
+                                    <div class="col mb-3">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -144,12 +100,11 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
-                                                        <h5>KES {{ number_format($product->price) }}</h5>
+                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
                                                         <a href="#" class="btn btn-custom rounded-pill">
@@ -166,7 +121,7 @@
                         <div id="watches" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($watches as $product)
-                                    <div class="col mb-1">
+                                    <div class="col mb-3">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -176,12 +131,11 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
-                                                        <h5>KES {{ number_format($product->price) }}</h5>
+                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
                                                         <a href="#" class="btn btn-custom rounded-pill">
@@ -198,7 +152,7 @@
                         <div id="accessories" class="tab-pane fade">
                             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
                                 @foreach ($accessories as $product)
-                                    <div class="col mb-1">
+                                    <div class="col mb-3">
                                         <div class="card h-100">
                                             <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
                                                 alt="{{ $product->title }}">
@@ -208,15 +162,14 @@
                                                 <div class="row justify-content-between align-items-end mt-auto">
                                                     <div class="rating-stars">
                                                         @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                            <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
                                                         @endfor
                                                     </div>
                                                     <div class="col-auto">
-                                                        <h5>KES {{ number_format($product->price) }}</h5>
+                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill">
+                                                        <a href="#" class="btn btn-outline-custom rounded-pill">
                                                             <i class="bi bi-cart-plus"></i> Add to Cart
                                                         </a>
                                                     </div>
@@ -234,6 +187,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
     <script>
         $(document).ready(function() {
