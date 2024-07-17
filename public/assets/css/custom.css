@@ -1,36 +1,29 @@
-/* Table Head Styling */
-.tablehead {
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 1%;
+  }
+  
+  th {
     background-color: red;
     color: white;
-}
-#tableHead{
-    background-color: red;
-    color: white;
-
-}
-/* Name Column Styling */
-.table th[scope="row"] {
-    font-weight: 400; /* Light font weight */
-}
-
-/* Table Border Styling */
-.table,
-.table th,
-.table td {
+  }
+  /* Table Border Styling*/
+.vamos,
+.vamos td,
+.vamos th
+ {
     border-bottom: 2px solid red;
 }
-
 .table thead th {
     border-bottom: 2px solid red;
 }
-.custom-tablehead {
-    background-color: red;
-    color: white;
-}
-
-/* Table Head Column Styling */
-.custom-th {
-    color: white; /* Ensure text color is white */
+.tr-color{
+    background-color: #F2F8F8;
 }
 .search{
     background-color: red;
@@ -38,11 +31,12 @@
     display: flex;
 }
 .borderstyle{
+    margin-top: 2%;
     border-color: red;
     color: red;
-    padding: 20;
+    padding: 10;
     border-radius: 40%;
-    font-size: 80%;
+    font-size: 60%;
     border: solid 3px red;
 }
 /* Style for the search container */
@@ -92,9 +86,227 @@
 .info-card {
     background-color: red;
     color: white;
-    padding: 2vh 4vw; /* Padding using viewport height and width */
-    border-radius: 10px; /* Slightly rounded corners */
-    font-size: 1.5vw; /* Font size using viewport width */
+    padding: 1vh 2vw; /* Padding using viewport height and width */
+    border-radius: 0.5vw; /* Slightly rounded corners */
+    font-size: 1vw; /* Font size using viewport width */
     display: inline-block; /* Ensure it only takes as much space as necessary */
     margin: 1vh 0; /* Margin using viewport height */
 }
+/* For devices with width up to 460px */
+@media (max-width: 460px) {
+    .container {
+        width: 5em;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: flex-start;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .col-4, .col-8 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align:right;
+    }
+
+    .col-4 img {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .search-container {
+        flex-direction: row;
+        width: 40%;
+        margin: 2vh 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input, .search-button {
+        font-size: 4vw;
+        height: 6vh;
+    }
+
+    .search-input {
+        flex: 1;
+    }
+
+    .search-button {
+        flex-shrink: 0;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .info-card {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .borderstyle {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        width: 100%;
+    }
+
+    table.vamos th, table.vamos td {
+        display: table-cell;
+        padding: 1vh 1vw;
+    }
+
+    table.vamos th {
+        white-space: nowrap;
+    }
+
+    table.vamos th:nth-child(2),
+    table.vamos td:nth-child(2),
+    table.vamos th:nth-child(3),
+    table.vamos td:nth-child(3),
+    table.vamos th:nth-child(5),
+    table.vamos td:nth-child(5),
+    table.vamos th:nth-child(6),
+    table.vamos td:nth-child(6) {
+        white-space: nowrap;
+    }
+
+    .bottom-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1vh;
+        text-align: left;
+    }
+
+    .bottom-container .info-card {
+        display: inline-block;
+    }
+
+    .bottom-container .borderstyle {
+        display: block;
+        margin-top: 1vh;
+        width: 20%;
+    }
+    .info-card{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+}
+/* For devices with width up to 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-4, .col-8 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-4 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+
+    .search-container {
+        flex-direction: row;
+        width: 60%;
+        margin: 2vh 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input, .search-button {
+        font-size: 3vw;
+        height: 6vh;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .search-button {
+        width: 30%;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .info-card {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .borderstyle {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+        width: 100%;
+    }
+
+    table.vamos th, table.vamos td {
+        display: table-cell;
+        padding: 1vh 1vw;
+    }
+
+    table.vamos th {
+        white-space: nowrap;
+    }
+
+    table.vamos th:nth-child(2),
+    table.vamos td:nth-child(2),
+    table.vamos th:nth-child(3),
+    table.vamos td:nth-child(3),
+    table.vamos th:nth-child(5),
+    table.vamos td:nth-child(5),
+    table.vamos th:nth-child(6),
+    table.vamos td:nth-child(6) {
+        white-space: nowrap;
+    }
+
+    .bottom-container {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding: 1vh;
+        text-align: left;
+    }
+
+    .bottom-container .info-card {
+        display: inline-block;
+    }
+
+    .bottom-container .borderstyle {
+        display: block;
+        margin-top: 1vh;
+        width: auto;
+    }
+
+    .info-card, .btn {
+        display: block;
+    }
+}
+

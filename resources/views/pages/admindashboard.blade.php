@@ -127,14 +127,16 @@
                                 24 HRS
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <a class="dropdown-item" href="#">a week</a>
-                                <a class="dropdown-item" href="#">a month</a>
-                                <a class="dropdown-item" href="#">One year</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('weekly')">a week</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('monthly')">a month</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('yearly')">One year</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><b>KES 35,000/=</b></h3>
+                        <h3 id="weeklyAmount" class="card-title "><b>KES 35,000/=</b></h3>
+                        <h3 id="monthlyAmount" class="card-title" style="display: none;"><b>KES 1,335,000/=</b></h3>
+                        <h3 id="yearlyAmount" class="card-title" style="display: none;"><b>KES 10,000,000/=</b></h3>
                     </div>
                 </div>
             </div>
@@ -264,6 +266,24 @@
                 }]
             }
         });
+
+        //Script to display sales changes based of time selection
+        function showAmount(type) {
+        if (type === 'weekly') {
+            document.getElementById('weeklyAmount').style.display = 'block';
+            document.getElementById('monthlyAmount').style.display = 'none';
+            document.getElementById('yearlyAmount').style.display = 'none';
+        } else if (type === 'monthly') {
+            document.getElementById('weeklyAmount').style.display = 'none';
+            document.getElementById('monthlyAmount').style.display = 'block';
+            document.getElementById('yearlyAmount').style.display = 'none';
+        } else if (type === 'yearly') {
+            document.getElementById('weeklyAmount').style.display = 'none';
+            document.getElementById('monthlyAmount').style.display = 'none';
+            document.getElementById('yearlyAmount').style.display = 'block';
+        }
+    }
+
     </script>
 </body>
 

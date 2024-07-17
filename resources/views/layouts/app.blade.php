@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 <body>
     <!-- Content of your body -->
     @yield('home')
-
+    
    
 </body>
 
