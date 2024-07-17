@@ -366,71 +366,7 @@ td{
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-        .footer-top-frame {
-            height: auto; /* Adjust height for responsiveness */
-            margin-bottom: 5vh; /* Adjust margin as needed */
-        }
-    
-        .footer-bottom-frame {
-            height: auto; /* Adjust height for responsiveness */
-        }
-    
-        .align-row {
-                  align-items:center;
-        }
-    
-        .align-row div {
-            margin-bottom: 1vh;
-            margin-right: 2vh; /* Reset the margin-right */
-        }
-    
-        .logo-position {
-            display: flex;
-            justify-content: center;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-        }
-    
-        .icon-size {
-            height: 4vw; /* Increase icon size for visibility */
-            width: 4.2vw; /* Increase icon size for visibility */
-        }
-    
-        .rowform {
-            justify-content: center;
-            text-align: center;
-            padding: 2vh;
-        }
-    
-        table {
-            margin-left:0 ;
-            margin-top: 5vh;
-        }
-    
-        th{
-            font-size: 2vw; /* Adjust font size for better visibility */
-        }
-        td{
-            font-size: 1.5vw;
-        }
-    
-        .subscribe {
-            font-size: 2vw; /* Adjust font size for better visibility */
-            padding-top: 5vh;
-        }
-    
-        .form {
-            width: 100%; /* Adjust width for responsiveness */
-            margin: 0 auto; /* Center align the form */
-        }
-    
-        .btnsend {
-            width: 50%;
-            font-size: 2vw; /* Adjust font size for better visibility */
-        }
 
-}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

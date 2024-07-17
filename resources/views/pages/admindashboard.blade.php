@@ -21,17 +21,31 @@
         .header .left-section {
             display: flex;
             align-items: center;
+            padding: 10px;
+            gap: 20px;
         }         
-        .header img {
-            height: 50px;
+        
+        .company-logo {
+    height: 35px;
+    margin-right: auto;
         }
-        .header .icons img {
-            width: 25px;
-            height: 25px;
-            margin-left: 15px;
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+        .icon {
+    font-size: 24px;
+    cursor: pointer;
+         }
+
+         .icon:hover {
+    color: #007bff;
         }
+        
         .header .icons img:hover {
-            background-color: #4B4B4B !important;
+            background-color: grey !important;
         }
         .header .right-section {
             display: flex;
@@ -57,7 +71,7 @@
             background-color: grey !important;
         }
         .sidebar a.active {
-            background-color: blue !important;
+            background-color: grey !important;
         }
         .main-content {
             flex: 1;
@@ -84,11 +98,11 @@
 <body>
     <div class="header">
         <div class="left-section">
-            <img src="{{ asset('../images/companylogo.jpg') }}" alt="Logo">   
+            <img src="{{ asset('../images/companylogo.jpg') }}" alt="Logo" class="componay-logo">   
             <div class="icons">
-                <img src="{{ asset('../images/notification.jpg') }}" alt="Notifications">
-                <img src="{{ asset('../images/settings.jpg') }}" alt="Settings">
-            </div>
+            <i class="bi bi-bell-fill icon" alt="Notifications"></i>
+            <i class="bi bi-gear-fill icon" alt="Settings"></i>
+        </div>
         </div>
         <div class="right-section">
             <button class="btn btn-light ml-3">Logout</button>
@@ -113,14 +127,16 @@
                                 24 HRS
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <a class="dropdown-item" href="#">a week</a>
-                                <a class="dropdown-item" href="#">a month</a>
-                                <a class="dropdown-item" href="#">One year</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('weekly')">a week</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('monthly')">a month</a>
+                                <a class="dropdown-item" href="#" onclick="showAmount('yearly')">One year</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><b>KES 35,000/=</b></h3>
+                        <h3 id="weeklyAmount" class="card-title "><b>KES 35,000/=</b></h3>
+                        <h3 id="monthlyAmount" class="card-title" style="display: none;"><b>KES 1,335,000/=</b></h3>
+                        <h3 id="yearlyAmount" class="card-title" style="display: none;"><b>KES 10,000,000/=</b></h3>
                     </div>
                 </div>
             </div>
@@ -250,6 +266,24 @@
                 }]
             }
         });
+
+        //Script to display sales changes based of time selection
+        function showAmount(type) {
+        if (type === 'weekly') {
+            document.getElementById('weeklyAmount').style.display = 'block';
+            document.getElementById('monthlyAmount').style.display = 'none';
+            document.getElementById('yearlyAmount').style.display = 'none';
+        } else if (type === 'monthly') {
+            document.getElementById('weeklyAmount').style.display = 'none';
+            document.getElementById('monthlyAmount').style.display = 'block';
+            document.getElementById('yearlyAmount').style.display = 'none';
+        } else if (type === 'yearly') {
+            document.getElementById('weeklyAmount').style.display = 'none';
+            document.getElementById('monthlyAmount').style.display = 'none';
+            document.getElementById('yearlyAmount').style.display = 'block';
+        }
+    }
+
     </script>
 </body>
 
