@@ -63,10 +63,6 @@ Route::get('/deliveries', function () {
     return view('deliveries');
 });
 
-Route::get('/login', function () {
-    return view('pages/login');
-});
-
 Route::get('/payment', function () {
     return view('pages/payment');
 });
