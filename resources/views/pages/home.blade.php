@@ -51,6 +51,7 @@
 
         #myTab.nav-pills {
             display: flex;
+            flex-direction: column;
         }
 
 
@@ -63,6 +64,7 @@
 
             #myTab.nav-pills {
                 display: flex;
+                flex-direction: row;
                 flex-wrap: nowrap;
                 /* Ensures items do not wrap on smaller screens */
             }
@@ -89,7 +91,7 @@
             <!-- Sidebar container (first column) -->
             <div class="col-md-3 col-12 sidebar">
                 <div class="scrollable-sidebar">
-                    <ul id="myTab" class="nav nav-pills">
+                    <ul id="myTab" class="nav nav-pills gap-2">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i>
                                 Shoes</a>
@@ -100,7 +102,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#other"><i class="bi bi-shuffle"></i></i> Other</a>
+                        </li>
                         <!-- Add more items as needed -->
                     </ul>
                 </div>
