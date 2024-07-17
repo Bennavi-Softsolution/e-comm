@@ -58,13 +58,7 @@
     ?>
 
 
-    <div class="cart mt-4">
-        <div class="added-to-basket">
-            <h2>Added to Basket</h2>
-            <button class="close">
-                <img src="{{ asset('../images/close.jpg') }}">
-            </button>
-        </div>
+    
 
         <div class="cart-item d-flex justify-content-between align-items-center my-3">
             <img src="{{ asset('../images/p5.jpg') }}" alt="Sneakers">
@@ -76,24 +70,23 @@
                 <p><strong>Item:</strong> 1234</p>
                 <div class="quantity d-flex align-items-center">
                     <label for="quantity" class="me-2"><strong>Quantity:</strong></label>
-
                     <div class="product-quantity input-group mb-3">
                         <div class=" input-group-prepend">
-                            <span class="input-group-text btn-number" data-field="quantity" data-type="minus">-</span>
+                            <span class="input-group-text btn-custom" data-field="quantity" data-type="minus">-</span>
                         </div>
                         <input type="text" class="form-control quantity-input" name="quantity" value="1"
                             min="1" max="50">
                         <div class="input-group-append">
-                            <span class="input-group-text btn-number" data-field="quantity" data-type="plus">+</span>
+                            <span class="input-group-text btn-custom" data-field="quantity" data-type="plus">+</span>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <a href="#" class="text-danger">
+                    <a href="#" class="text-custom">
                         Available offer to save you money</di>
                     </a>
                 </div>
-                <button class="remove btn btn-danger ms-3">
+                <button class="remove btn btn-custom ms-3">
                     <i class="bi bi-trash"></i> REMOVE</button>
             </div>
         </div>
@@ -113,7 +106,7 @@
                 </div>
 
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active single-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p2.jpg') }}" alt="GripMax">
@@ -128,7 +121,7 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 1,799</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
 
@@ -145,7 +138,7 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 7,999</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +146,7 @@
 
 
 
-                    <div class="carousel-item">
+                    <div class="carousel-item single-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/sneakers.jpg') }}" alt="Sneakers">
@@ -168,9 +161,10 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 2,999</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
+
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p3.jpg') }}" alt="UrbanFlex">
                                 <h4>UrbanFlex Laced Official Shoe</h4>
@@ -184,13 +178,13 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 1,499</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item single-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p21.jpg') }}" alt="OfficialShoe">
@@ -205,9 +199,10 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 2,499</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
+
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p4.jpg') }}" alt="OfficialShoe">
                                 <h4>Mens Brown Laced Official Shoe</h4>
@@ -221,13 +216,13 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 2,499</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item single-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p7.jpg') }}" alt="TrekkingSandals">
@@ -242,7 +237,7 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 9,999</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="product-item me-3">
@@ -258,7 +253,7 @@
                                 </div>
                                 <div class="price-and-cart">
                                     <p><strong>Price:</strong> KES 2,999</p> &nbsp;
-                                    <button class="add-to-cart btn btn-danger">Add to Cart</button>
+                                    <button class="add-to-cart btn btn-custom">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +277,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             var plusBtn = document.querySelector('.input-group-text[data-type="plus"]');
             var minusBtn = document.querySelector('.input-group-text[data-type="minus"]');
-            var input = document.querySelector('.form-control');
+            var input = document.querySelector('.quantity-input');
 
             plusBtn.addEventListener('click', function(e) {
                 e.preventDefault();
