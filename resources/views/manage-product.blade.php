@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@extends('pages.admindashboard')
 
+@section('manage-product')
 
 <div class="container-fluid mt-4">
   <div class="row mb-3">
@@ -65,4 +67,4 @@
     </table>
 </div>
 
-
+@endsection
