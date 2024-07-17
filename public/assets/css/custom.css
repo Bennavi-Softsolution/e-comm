@@ -94,6 +94,50 @@ table {
 }
 /* For devices with width up to 460px */
 @media (max-width: 460px) {
+    table.vamos th, table.vamos td {
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 2vw; /* Adjust font size */
+    }
+      table.vamos td {
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 2vw; /* Adjust font size */
+    }
+
+    .name-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-container span {
+        display: block;
+    }
+
+    .single-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .single-name img {
+        margin-right: 1vw;
+    }
+
+    .single-name span {
+        white-space: nowrap;
+    }
+
+    .double-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .double-name img {
+        margin-right: 1vw;
+    }
+
+    .double-name span {
+        white-space: normal;
+    }
     .container {
         width: 5em;
         padding: 0;
@@ -119,26 +163,46 @@ table {
         max-width: 100%;
         height: auto;
     }
-
     .search-container {
-        flex-direction: row;
-        width: 40%;
-        margin: 2vh 0;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        margin: 5vh 0;
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 1vw;
+        flex-direction: row;
+        width: 100%;
         align-items: center;
     }
 
     .search-input, .search-button {
-        font-size: 4vw;
-        height: 6vh;
+        height: 1vh;
     }
 
     .search-input {
         flex: 1;
+        width: 10vw; /* Width using viewport width */
+        padding: 1vh 3vw; /* Padding using viewport height and width */
+        border: none;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        outline: none;
+        color: white;
+        background-color: #ee1313;
+        font-size: 1.5vw; /* Font size using viewport width */
     }
 
     .search-button {
-        flex-shrink: 0;
+    width: 5vw;
+    padding: 1vh 0vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+    background-color: #ee1313;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw; /* Font size using viewport width */
     }
 
     .table-responsive {
@@ -204,6 +268,46 @@ table {
 }
 /* For devices with width up to 768px */
 @media (max-width: 768px) {
+    table.vamos td {
+        padding: 0.75vh 1.5vw; /* Reduce padding */
+        font-size: 2.5vw; /* Adjust font size */
+    }
+
+    .name-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-container span {
+        display: block;
+    }
+
+    .single-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .single-name img {
+        margin-right: 1vw;
+    }
+
+    .single-name span {
+        white-space: nowrap;
+    }
+
+    .double-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .double-name img {
+        margin-right: 1vw;
+    }
+
+    .double-name span {
+        white-space: normal;
+    }
     .container {
         width: 100%;
         padding: 0;

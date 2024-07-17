@@ -37,7 +37,12 @@
     <th>Action</th>
   </tr>
   <tr class="tr-color">
-  <td> <img src="{{asset('assets/images/male avator.png')}}" alt="status image"> Harrry Potter</td>
+  <td>
+  <div class="name-container single-name">
+        <img src="{{asset('assets/images/male avator.png')}}" alt="status image">
+        <span>Harrry Potter</span>
+      </div>
+  </td>
       <td>QRT4567</td>
       <td>harry@gmail.com</td>
       <td>Nairobi</td>
@@ -45,7 +50,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
   </tr>
   <tr class="tr-color">
-  <td><img src="{{asset('assets/images/Female avator.png')}}" alt="status image">Hermione Granger</td>
+  <td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/Female avator.png')}}" alt="status image">
+        <span>Hermione Granger</span>
+      </div>
+    </td>
       <td>QRT4568</td>
       <td>Hermione@gmail.com</td>
       <td>Nakuru</td>
@@ -53,7 +63,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
   </tr>
   <tr class="tr-color">
-  <td><img src="{{asset('assets/images/male avator.png')}}" alt="status image"> Draco Malfoy</td>
+  <td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/male avator.png')}}" alt="status image">
+        <span>Draco Malfoy</span>
+      </div>
+    </td>
       <td>QRT4769</td>
       <td>draco@gmail.com</td>
       <td>Mombasa</td>
@@ -61,7 +76,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
   </tr>
   <tr class="tr-color">
-  <td><img src="{{asset('assets/images/Female avator.png')}}" alt="status image"> Katrine Dhyre</td>
+  <td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/Female avator.png')}}" alt="status image">
+        <span>Katrine Dhyre</span>
+      </div>
+    </td>
       <td>QRT4269</td>
       <td>avator@gmail.com</td>
       <td>Berlin</td>
@@ -69,7 +89,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
 </tr>
 <tr class="tr-color">
-<td> <img src="{{asset('assets/images/male avator.png')}}" alt="status image"> Ron</td>
+<td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/male avator.png')}}" alt="status image">
+        <span>Ron</span>
+      </div>
+    </td>
       <td>QRT3768</td>
       <td>Ron@gmail.com</td>
       <td>New Orleans</td>
@@ -77,7 +102,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
 </tr>
 <tr class="tr-color">
-<td><img src="{{asset('assets/images/male avator.png')}}" alt="status image"> Stiles mark</td>
+<td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/male avator.png')}}" alt="status image">
+        <span>Stiles Miles</span>
+      </div>
+    </td>
       <td>QRT47329</td>
       <td>stiles@gmail.com</td>
       <td>Mumbai</td>
@@ -85,7 +115,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
 </tr>
 <tr class="tr-color">
-      <td><img src="{{asset('assets/images/Female avator.png')}}" alt="status image"> Faith Wanjiku</td>
+<td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/Female avator.png')}}" alt="status image">
+        <span>Faith Wanjiku</span>
+      </div>
+    </td>
       <td>QRT4269</td>
       <td>d.annyor@gmail.com</td>
       <td>Denver</td>
@@ -93,7 +128,12 @@
       <td><img src="{{asset('assets/images/refresh.png')}}" alt="refresh image"> <img src="{{asset('assets/images/delete.png')}}" alt="status image"></td>
     </tr>
     <tr class="tr-color">
-      <td> <img src="{{asset('assets/images/male avator.png')}}" alt="status image">Ian Fortune</td>
+    <td>
+      <div class="name-container single-name">
+        <img src="{{asset('assets/images/male avator.png')}}" alt="status image">
+        <span>Ian Fortune</span>
+      </div>
+    </td>
       <td>QGT3768</td>
       <td>fortune@gmail.com</td>
       <td>Nyeri</td>
@@ -112,7 +152,7 @@
     </div>
     <div class="col">
 
-    <button type="button" class="btn borderstyle">- 1 +</button>
+    <button type="button" class="btn btncustmon borderstyle">- 1 +</button>
       
     </div>
   </div>
