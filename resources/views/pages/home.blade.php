@@ -133,8 +133,19 @@
                         <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#other"><i class="bi bi-shuffle"></i> Other</a>
+                        <a class="nav-link" href="#electronics"><i class="bi bi-joystick"></i> Sporting Goods</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Toys"><i class="bi bi-car-front-fill"></i> Toys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#handb"><i class="fas fa-headphones"></i> Health & Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#homedecor"><i class="bi bi-shuffle"></i> Home Decor</a>
+                    </li>
+                    
+                    
                     <!-- Add more items as needed -->
                 </ul>
             </div>
