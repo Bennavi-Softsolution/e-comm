@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+
+<div class="container-fluid mt-4">
+  <div class="row mb-3">
+      
+      <div class="col-md-6 text-right">
+          <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#addItemModal">
+              <i class="bi bi-plus-circle-fill"></i> Add Item
+          </button>
+      </div>
+  </div>
+
 <div class="table-responsive">
     <table class="table table-striped table-hover">
         <thead class="thead-dark table-dark">
@@ -53,3 +64,5 @@
         </tbody>
     </table>
 </div>
+
+
