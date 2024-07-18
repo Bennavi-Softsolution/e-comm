@@ -69,7 +69,7 @@
                 <p><strong>Price:</strong> KES 999</p>
                 <p><strong>Item:</strong> 1234</p>
                 <div class="quantity d-flex align-items-center">
-                    <label for="quantity" class="me-2"><strong>Quantity:</strong></label>
+                    <label for="quantity" class="me-2 quantity"><strong>Quantity:</strong></label> 
                     <div class="product-quantity input-group mb-3">
                         <div class=" input-group-prepend">
                             <span class="input-group-text btn-custom" data-field="quantity" data-type="minus">-</span>
@@ -103,10 +103,11 @@
                         aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
+                        
                 </div>
 
                 <div class="carousel-inner">
-                    <div class="carousel-item active single-item">
+                    <div class="carousel-item active">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/p2.jpg') }}" alt="GripMax">
@@ -146,7 +147,7 @@
 
 
 
-                    <div class="carousel-item single-item">
+                    <div class="carousel-item">
                         <div class="d-flex justify-content-center">
                             <div class="product-item me-3">
                                 <img src="{{ asset('../images/sneakers.jpg') }}" alt="Sneakers">
@@ -262,11 +263,13 @@
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">
-                    <img src="{{ asset('../images/prev.jpg') }}">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="next">
-                    <img src="{{ asset('../images/next.jpg') }}">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
