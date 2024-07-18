@@ -21,17 +21,31 @@
         .header .left-section {
             display: flex;
             align-items: center;
+            padding: 10px;
+            gap: 20px;
         }         
-        .header img {
-            height: 50px;
+        
+        .company-logo {
+    height: 35px;
+    margin-right: auto;
         }
-        .header .icons img {
-            width: 25px;
-            height: 25px;
-            margin-left: 15px;
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+        .icon {
+    font-size: 24px;
+    cursor: pointer;
+         }
+
+         .icon:hover {
+    color: #007bff;
         }
+        
         .header .icons img:hover {
-            background-color: #4B4B4B !important;
+            background-color: grey !important;
         }
         .header .right-section {
             display: flex;
@@ -57,7 +71,7 @@
             background-color: grey !important;
         }
         .sidebar a.active {
-            background-color: blue !important;
+            background-color: grey !important;
         }
         .main-content {
             flex: 1;
@@ -84,11 +98,11 @@
 <body>
     <div class="header">
         <div class="left-section">
-            <img src="{{ asset('../images/companylogo.jpg') }}" alt="Logo">   
+            <img src="{{ asset('../images/companylogo.jpg') }}" alt="Logo" class="componay-logo">   
             <div class="icons">
-                <img src="{{ asset('../images/notification.jpg') }}" alt="Notifications">
-                <img src="{{ asset('../images/settings.jpg') }}" alt="Settings">
-            </div>
+            <i class="bi bi-bell-fill icon" alt="Notifications"></i>
+            <i class="bi bi-gear-fill icon" alt="Settings"></i>
+        </div>
         </div>
         <div class="right-section">
             <button class="btn btn-light ml-3">Logout</button>

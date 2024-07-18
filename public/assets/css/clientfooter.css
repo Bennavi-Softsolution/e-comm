@@ -1,6 +1,6 @@
 body{
-    background-color: #D9D9D9;
-    color: white;
+    background-color:#D9D9D9;
+    color: black;
 }
 .footer-container {
     background-color: #D9D9D9;
@@ -12,11 +12,11 @@ body{
 }
 
 /* Top frame style */
-.footer-top-frame {
-    background-color: black;
+.footer-bottom-frame {
+    background-color: #f8f9fa;
     width: 100%;
     height: 50vh; /* Adjust height as needed */
-    margin-bottom: 10vh; /* Margin to create the white separator */
+    margin-bottom: 0vh; /* Margin to create the white separator */
 }
 
 /* Separator style */
@@ -27,10 +27,10 @@ body{
 }
 
 /* Bottom frame style */
-.footer-bottom-frame {
-    background-color: black;
+.footer-top-frame {
+    background-color: #f8f9fa;
     width: 100%;
-    height: 50vh; /* Adjust height as needed */
+    height: 40vh; /* Adjust height as needed */
 }
 .kavoon-regular {
     font-family: "Kavoon", serif;
@@ -39,7 +39,7 @@ body{
   }
   .logo-position{
     margin-right: 2vw;
-    padding-top: 4vh;
+    padding-top: 1vh;
 
 
   }
@@ -59,17 +59,16 @@ body{
     margin-right: 2vw;
 }
 .ecomm{
-    padding-top: 6vh;
-    padding-bottom: 4vh;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
 }
 .propertyrights{
-padding-top: 4vh;
-padding-bottom: 4vh;
+padding-top: 0vh;
+padding-bottom: 0vh;
 }
 .rowform{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
    
 }
 .rowform p {
@@ -78,20 +77,21 @@ padding-bottom: 4vh;
     font-size: 1vw; /* Adjust font size if needed */
 }
 .propertyicon{
+    color: black;
     height: 1vw;
     width: 1vw;
    
 }
 .company{
-    color: red;
+    color: #ee1313;
     font-size: 0.6vw;
 }
 .tb{
     background-color: black;
-    color: red;
+    color: #ee1313;
 }
 .btnsend{
-    background-color: red;
+    background-color: #ee1313;
     color: white;
 }
 .rightside{
@@ -106,7 +106,7 @@ padding-bottom: 4vh;
     border:2% solid white;
 }
 .border-background{
-    background-color: black;
+    background-color: white;
 }
 .border-size{
     width: 25vw;
@@ -131,20 +131,37 @@ table {
     text-align: left;
     }
    td{
-  color: red;
+  color: #676161f5;
   }
   .col1{
     display:flex;
   }
+  .card-advert{
+    margin-right: 8vw;
+    margin-top: 6vh;
+  }
  /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 460px) {
+    .ecomm{
+        padding-bottom: 10vh;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-advert{
+        margin-top: 2vh;
+        height: 6vh;
+        width: 20vw;
+
+    }
     .footer-top-frame {
         height: 40vh; /* Adjust height for responsiveness */
         margin-bottom: 1vh; /* Adjust margin as needed */
         padding: 1vh;
     }
     .footer-bottom-frame {
-        height: 65vh; /* Adjust height for responsiveness */
+        height: 40vh; /* Adjust height for responsiveness */
         padding: 2vh;
     }
     .align-row{
@@ -157,8 +174,8 @@ table {
         margin-right: 0; /* Reset the margin-right */
     }
     h4{
-        margin-top: -4vh;
-        margin-bottom: -3vh;
+        margin-top: 4vh;
+        margin-bottom: 3vh;
         align-items: center;
     }
     div.col1{
@@ -171,8 +188,11 @@ table {
         padding-bottom: 2vh;
     }
     .icon-size {
-        height: 7vw; /* Increase icon size for visibility */
-        width: 7.8vw; /* Increase icon size for visibility */
+        height: 9vh; /* Increase icon size for visibility */
+        width: 30vw; /* Increase icon size for visibility */
+    }
+    .icon-spacing{
+        margin-left:5vw ;
     }
     .rowform {
         justify-content: center;
@@ -366,71 +386,7 @@ td{
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-        .footer-top-frame {
-            height: auto; /* Adjust height for responsiveness */
-            margin-bottom: 5vh; /* Adjust margin as needed */
-        }
-    
-        .footer-bottom-frame {
-            height: auto; /* Adjust height for responsiveness */
-        }
-    
-        .align-row {
-                  align-items:center;
-        }
-    
-        .align-row div {
-            margin-bottom: 1vh;
-            margin-right: 2vh; /* Reset the margin-right */
-        }
-    
-        .logo-position {
-            display: flex;
-            justify-content: center;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-        }
-    
-        .icon-size {
-            height: 4vw; /* Increase icon size for visibility */
-            width: 4.2vw; /* Increase icon size for visibility */
-        }
-    
-        .rowform {
-            justify-content: center;
-            text-align: center;
-            padding: 2vh;
-        }
-    
-        table {
-            margin-left:0 ;
-            margin-top: 5vh;
-        }
-    
-        th{
-            font-size: 2vw; /* Adjust font size for better visibility */
-        }
-        td{
-            font-size: 1.5vw;
-        }
-    
-        .subscribe {
-            font-size: 2vw; /* Adjust font size for better visibility */
-            padding-top: 5vh;
-        }
-    
-        .form {
-            width: 100%; /* Adjust width for responsiveness */
-            margin: 0 auto; /* Center align the form */
-        }
-    
-        .btnsend {
-            width: 50%;
-            font-size: 2vw; /* Adjust font size for better visibility */
-        }
 
-}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
