@@ -10,27 +10,9 @@ body {
     padding: 0;
     background-color: #fff;
 }
-.added-to-basket {
-    background-color: #700C0C;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-.added-to-basket .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.added-to-basket .close:hover {
-    color: #ffcccb;
-}
+
 .cart-item {
+    text-align: center;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -39,13 +21,14 @@ body {
     border-radius: 8px;
 }
 .cart-item img {
-    width: 35%;
-    height: 100%;
+    width:50% ;  
+    height: auto;
     border-radius: 8px;
 }
 .item-details {
     flex: 1;
     margin-left: 20px;
+    text-align: left;
 }
 .item-details h3 {
     margin-top: 0;
@@ -56,8 +39,15 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.product-quantity {
+    display: flex;
+    align-items: center;
+}
+
 .quantity-input {
     max-width: 50px;
+    text-align: center;
 }
 
 .remove {
@@ -96,6 +86,7 @@ body {
 }
 
 .carousel-item {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -158,22 +149,52 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .carousel-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
         flex-direction: column;
     }
 
     .carousel-inner {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .product-item {
         max-width: 100%;
         margin: 0 auto;
     }
-    .carousel-item.single-item {
-        display: block;
-        text-align: center;
+   
+   
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
     }
 
-   
+    .cart-item .item-details {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    
+    .quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+.carousel-item.single-item {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 }

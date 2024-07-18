@@ -51,7 +51,7 @@
         }
 
         .btn-custom-effect:hover {
-            transform: scale(1);
+            transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -72,6 +72,10 @@
         .payment-card:hover {
             transform: translateY(-5px);
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-control-address {
+            background-color: #f0f0f0;
+            border: 1px solid #acc;
         }
     </style>
 
@@ -151,8 +155,8 @@
                                                 <h5 class="card-title">Pay Now</h5>
                                                 <p class="card-text">Pay immediately using your preferred payment
                                                     method.</p>
-                                                    <img src="{{ asset('images/payment-forms.png') }}" class="card-img-top"
-                                                alt="an image">
+                                                <img src="{{ asset('images/payment-forms.png') }}" class="card-img-top"
+                                                    alt="an image">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="paymentMethod"
                                                         id="payNowRadio" value="payNow">
@@ -170,7 +174,7 @@
                                                 <p class="card-text">Pay when your order is delivered to your doorstep.
                                                 </p>
                                                 <img src="{{ asset('images/payment-forms.png') }}" class="card-img-top"
-                                                alt="an image">
+                                                    alt="an image">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="paymentMethod"
                                                         id="payOnDeliveryRadio" value="payOnDelivery">
@@ -191,8 +195,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -203,7 +205,9 @@
                         <h2 class="fw-bold">ADDRESS</h2>
                     </div>
                     <div class="col text-end">
-                        <button class="btn btn-custom btn-custom-effect">CHANGE YOUR ADDRESS</button>
+                        <button id="changeAddressBtn" class="btn btn-custom btn-custom-effect" data-bs-toggle="modal" data-bs-target="#addressModal">
+                            CHANGE YOUR ADDRESS
+                        </button>
                     </div>
                 </div>
                 <div class="row mt-2 p-2 border rounded">
@@ -219,6 +223,69 @@
             </div>
         </div>
 
+        <!-- Modal for Address Change -->
+        <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addressModalLabel">Change Your Address</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="p-4">
+                                <input type="text" placeholder="First Name" class="form-control form-control-custom mb-3">
+                                <input type="text" placeholder="Last Name" class="form-control form-control-custom mb-3">
+                                <div class="row mb-3">
+                        <div class="col-auto">
+                            <div class="dropdown">
+                                <button class="btn bg-custom-black btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    +254
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input type="text" placeholder="Phone Number" class="form-control custom-input placeholder-white" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-auto">
+                            <div class="dropdown">
+                                <button class="btn btn-custom text-white dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    +254
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input type="text" placeholder="Additional Phone Number" class="form-control custom-input placeholder-white" />
+                        </div>
+                    </div>
+                                <input type="text" placeholder="Address" class="form-control form-control-custom mb-3">
+                                <input type="text" placeholder="Postal Code" class="form-control form-control-custom mb-3">
+                                <input type="text" placeholder="Region" class="form-control form-control-custom mb-3">
+                                <input type="text" placeholder="City" class="form-control form-control-custom mb-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End of Modal for Address Change -->
         <div class="card mb-4 slide-in-from-left fade-in">
             <div class="card-body">
                 <h2 class="fw-bold">DELIVERY</h2>
@@ -258,8 +325,7 @@
         <div class="card mb-4 slide-in-from-left fade-in">
             <div class="card-body">
                 <h2 class="fw-bold">Modify CART</h2>
-                <p class="text-center"><a href="#" class="text-primary"> &lt; Go back & continue Shopping</a>
-                </p>
+                <p class="text-center"><a href="#" class="text-primary"> &lt; Go back & continue Shopping</a></p>
             </div>
         </div>
 
