@@ -300,22 +300,109 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4 p-4 border rounded">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <span>Pick-up station</span>
-                        </div>
-                        <div class="col text-end">
-                            <button class="btn btn-custom btn-custom-effect">Select Pick-up station &gt;</button>
-                        </div>
+                <div class="card mb-4 slide-in-from-left fade-in">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h2 class="fw-bold">PICK-UP STATION</h2>
                     </div>
-                    <div class="row mt-2 p-2 border rounded">
-                        <div class="col-auto">
-                            <img src="images/Palm Up Hand.png" alt="pick-up-station" class="me-2">
+                    <div class="col text-end">
+                        <button type="button" class="btn btn-custom btn-custom-effect" data-bs-toggle="modal"
+                            data-bs-target="#pickupStationModal">
+                            SELECT PICK-UP STATION
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-2 p-2 border rounded">
+                    <div class="col-auto">
+                        <img src="images/Place Marker.png" alt="pickup-station" class="me-2">
+                    </div>
+                    <div class="col">
+                        <span>Pick-up station details here</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Pick-up Station -->
+            <div class="modal fade" id="pickupStationModal" tabindex="-1" aria-labelledby="pickupStationModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pickupStationModalLabel">Select Pick-up Station</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <p>Eldoret Station</p>
-                            <p>Eldoret Station Daima towers 5th floor</p>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Station 1</h5>
+                                                <p class="card-text">Address details for Station 1</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pickupStation"
+                                                        id="station1Radio" value="station1">
+                                                    <label class="form-check-label" for="station1Radio">
+                                                        Select Station 1
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Station 2</h5>
+                                                <p class="card-text">Address details for Station 2</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pickupStation"
+                                                        id="station2Radio" value="station2">
+                                                    <label class="form-check-label" for="station2Radio">
+                                                        Select Station 2
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Station 3</h5>
+                                                <p class="card-text">Address details for Station 3</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pickupStation"
+                                                        id="station3Radio" value="station3">
+                                                    <label class="form-check-label" for="station3Radio">
+                                                        Select Station 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Station 4</h5>
+                                                <p class="card-text">Address details for Station 4</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pickupStation"
+                                                        id="station4Radio" value="station4">
+                                                    <label class="form-check-label" for="station4Radio">
+                                                        Select Station 4
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END of pickup-station modal -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-custom">Confirm</button>
                         </div>
                     </div>
                 </div>
