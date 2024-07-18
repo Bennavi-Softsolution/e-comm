@@ -379,7 +379,10 @@
                         <img src="images/Place Marker.png" alt="pickup-station" class="me-2">
                     </div>
                     <div class="col">
-                        <span>Pick-up station details here</span>
+                        <span>
+                        <p>Eldoret Station</p>
+                        <p>Eldoret Station Daima towers 5th floor</p>
+                    </span>
                     </div>
                 </div>
             </div>
