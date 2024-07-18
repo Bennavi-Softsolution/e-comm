@@ -14,9 +14,10 @@
     <div class="delivery">
         <div class="title">
             <p>Due Delivery</p>
-            <i class="ri-arrow-up-s-fill"></i>
+            <i class="ri-arrow-up-s-fill" onclick="display1()" ></i>
+            <!-- <i class="fa-solid fa-caret-down  icon-hidden" id="icon"></i> -->
         </div>
-        <div class="data">
+        <div class="data" id="display1">
             <table class="table" id="table">
                 <thead class="table-head" id="tablehead">
                     <tr>
@@ -60,11 +61,12 @@
             </table>
         </div>
 
-        <div class="title">
+        <div class="title title2">
             <p>Pending Delivery</p>
-            <i class="ri-arrow-up-s-fill"></i>
+            <i class="ri-arrow-up-s-fill" onclick="display2()"></i>
+            <!-- <i class="fa-solid fa-caret-down  icon-hidden" id="icon"></i> -->
         </div>
-        <div class="data">
+        <div class="data" id="display2">
             <table class="table" id="table">
                 <thead class="table-head" id="tablehead">
                     <tr>
@@ -78,28 +80,28 @@
                 <tbody>
                     <tr>
                         <th scope="row">001</th>
-                        <td>Cuttlery</td>
+                        <td>Eggs</td>
                         <td>CL001</td>
                         <td>Nairobi</td>
                         <td>+254111111</td>
                     </tr>
                     <tr>
                         <th scope="row">002</th>
-                        <td>Shoes</td>
+                        <td>Keys</td>
                         <td>CL002</td>
                         <td>Kisumu</td>
                         <td>+254112222</td>
                     </tr>
                     <tr>
                         <th scope="row">003</th>
-                        <td> Bag</td>
+                        <td> Books</td>
                         <td>CL003</td>
                         <td>Nakuru</td>
                         <td>+254113333</td>
                     </tr>
                     <tr>
                         <th scope="row">004</th>
-                        <td> Groceries</td>
+                        <td> Phone</td>
                         <td>CL004</td>
                         <td>Machakos</td>
                         <td>+254114443</td>
@@ -108,6 +110,22 @@
             </table>
         </div>
     </div>
+
+
+
+    <script>
+        function display1() {
+            document.getElementById("display1").style.display = "block";
+            // document.getElementById("icon").style.display = "block";
+        }
+
+        function display2() {
+            document.getElementById("display2").style.display = "block";
+            // document.getElementById("icon").style.display = "block";
+        }
+    </script>
+
+
 </body>
 
 </html>
