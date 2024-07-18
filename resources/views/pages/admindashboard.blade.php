@@ -109,18 +109,20 @@
                     <div class="card-header">
                         Total Revenue in:
                         <div class="dropdown">
-                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown"  aria-expanded="false">
-                                24 HRS
+                            <button class="btn btn-warning dropdown-toggle" role="button" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"  aria-expanded="false">
+                               Period
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <a class="dropdown-item" href="#" onclick="showAmount('weekly')">a week</a>
-                                <a class="dropdown-item" href="#" onclick="showAmount('monthly')">a month</a>
-                                <a class="dropdown-item" href="#" onclick="showAmount('yearly')">One year</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                               <li><a class="dropdown-item" href="#" onclick="showAmount('daily')">24 Hrs</a></li>
+                               <li><a class="dropdown-item" href="#" onclick="showAmount('weekly')">a week</a></li>
+                               <li><a class="dropdown-item" href="#" onclick="showAmount('monthly')">a month</a></li>
+                               <li><a class="dropdown-item" href="#" onclick="showAmount('yearly')">One year</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 id="weeklyAmount" class="card-title "><b>KES 35,000/=</b></h3>
+                        <h3 id="dailyAmount" class="card-title "><b>KES 35,000/=</b></h3>
+                        <h3 id="weeklyAmount" class="card-title" style="display: none;"><b>KES 234,000/=</b></h3>
                         <h3 id="monthlyAmount" class="card-title" style="display: none;"><b>KES 1,335,000/=</b></h3>
                         <h3 id="yearlyAmount" class="card-title" style="display: none;"><b>KES 10,000,000/=</b></h3>
                     </div>
@@ -131,20 +133,26 @@
                     <div class="card-header">
                         Total number of Orders:  
                         <div class="dropdown">
-                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pending
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Order Type
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <a class="dropdown-item" href="#">Processing</a>
-                                <a class="dropdown-item" href="#">Shipped</a>
-                                <a class="dropdown-item" href="#">Delivered</a>
-                                <a class="dropdown-item" href="#">Canceled</a>
-                                <a class="dropdown-item" href="#">Returned</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#" onclick="showOrder('pending')" >Pending</a>
+                                <a class="dropdown-item" href="#" onclick="showOrder('processing')">Processing</a>
+                                <a class="dropdown-item" href="#" onclick="showOrder('shipped')">Shipped </a>
+                                <a class="dropdown-item" href="#" onclick="showOrder('delivered')">Delivered</a>
+                                <a class="dropdown-item" href="#" onclick="showOrder('canceled')">Canceled</a>
+                                <a class="dropdown-item" href="#" onclick="showOrder('returned')">Returned</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><b>150</b></h3>
+                        <h3 id="pendingAmount" class="card-title" ><b>150</b></h3>
+                        <h3 id="processingAmount" class="card-title" style="display: none;"><b>1520</b></h3>
+                        <h3 id="shippedAmount" class="card-title" style="display: none;"><b>150</b></h3>
+                        <h3 id="deliveredAmount" class="card-title" style="display: none;"><b>1530</b></h3>
+                        <h3 id="canceledAmount"  class="card-title" style="display: none;"><b>1350</b></h3>
+                        <h3 id="returnAmount" class="card-title" style="display: none;"><b>3150</b></h3>
                     </div>
                 </div>
             </div>
@@ -153,18 +161,20 @@
                     <div class="card-header">
                         Number of New Customers:
                         <div class="dropdown">
-                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Today
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Period
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <a class="dropdown-item" href="#">One week</a>
-                                <a class="dropdown-item" href="#">One month</a>
-                                <a class="dropdown-item" href="#">One Year</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#" onclick="showPeriod('one-week')">One week</a>
+                                <a class="dropdown-item" href="#" onclick="showPeriod('one-month')">One month</a>
+                                <a class="dropdown-item" href="#" onclick="showPeriod('one-year')">One Year</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><b>50</b></h3>
+                        <h3 id="week-one" class="card-title"><b>520</b></h3>
+                        <h3 id="month-one" class="card-title" style="display: none;"><b>340</b></h3>
+                        <h3 id="year-one" class="card-title" STYLE="display: none;"><b>720</b></h3>
                     </div>
                 </div>
             </div>
@@ -255,18 +265,96 @@
 
         //Script to display sales changes based of time selection
         function showAmount(type) {
-        if (type === 'weekly') {
+        if (type === 'daily') {
+            document.getElementById('dailyAmount').style.display = 'block';
+            document.getElementById('weeklyAmount').style.display = 'none';
+            document.getElementById('monthlyAmount').style.display = 'none';
+            document.getElementById('yearlyAmount').style.display = 'none';
+        }
+        else if (type === 'weekly') {
+            document.getElementById('dailyAmount').style.display = 'none';
             document.getElementById('weeklyAmount').style.display = 'block';
             document.getElementById('monthlyAmount').style.display = 'none';
             document.getElementById('yearlyAmount').style.display = 'none';
-        } else if (type === 'monthly') {
+        }
+        else if (type === 'monthly') {
+            document.getElementById('dailyAmount').style.display = 'none';
             document.getElementById('weeklyAmount').style.display = 'none';
             document.getElementById('monthlyAmount').style.display = 'block';
             document.getElementById('yearlyAmount').style.display = 'none';
         } else if (type === 'yearly') {
+            document.getElementById('dailyAmount').style.display = 'none';
             document.getElementById('weeklyAmount').style.display = 'none';
             document.getElementById('monthlyAmount').style.display = 'none';
             document.getElementById('yearlyAmount').style.display = 'block';
+        }
+    }
+
+    function showOrder(type) {
+        if (type === 'pending') {
+            document.getElementById('pendingAmount').style.display = 'block';
+            document.getElementById('processingAmount').style.display = 'none';
+            document.getElementById('shippedAmount').style.display = 'none';
+            document.getElementById('deliveredAmount').style.display = 'none';
+            document.getElementById('canceledAmount').style.display = 'none';
+            document.getElementById('returnAmount').style.display = 'none';
+        }
+        else if (type === 'processing') {
+            document.getElementById('pendingAmount').style.display = 'none';
+            document.getElementById('processingAmount').style.display = 'block';
+            document.getElementById('shippedAmount').style.display = 'none';
+            document.getElementById('deliveredAmount').style.display = 'none';
+            document.getElementById('canceledAmount').style.display = 'none';
+            document.getElementById('returnAmount').style.display = 'none';
+        }
+        else if (type === 'shipped') {
+            document.getElementById('pendingAmount').style.display = 'none';
+            document.getElementById('processingAmount').style.display = 'none';
+            document.getElementById('shippedAmount').style.display = 'block';
+            document.getElementById('deliveredAmount').style.display = 'none';
+            document.getElementById('canceledAmount').style.display = 'none';
+            document.getElementById('returnAmount').style.display = 'none';
+        }
+        else if (type === 'delivered') {
+            document.getElementById('pendingAmount').style.display = 'none';
+            document.getElementById('processingAmount').style.display = 'none';
+            document.getElementById('shippedAmount').style.display = 'none';
+            document.getElementById('deliveredAmount').style.display = 'block';
+            document.getElementById('canceledAmount').style.display = 'none';
+            document.getElementById('returnAmount').style.display = 'none';
+        } else if (type === 'canceled') {
+            document.getElementById('pendingAmount').style.display = 'none';
+            document.getElementById('processingAmount').style.display = 'none';
+            document.getElementById('shippedAmount').style.display = 'none';
+            document.getElementById('deliveredAmount').style.display = 'none';
+            document.getElementById('canceledAmount').style.display = 'block';
+            document.getElementById('returnAmount').style.display = 'none';
+        }
+        else if (type === 'returned') {
+            document.getElementById('pendingAmount').style.display = 'none';
+            document.getElementById('processingAmount').style.display = 'none';
+            document.getElementById('shippedAmount').style.display = 'none';
+            document.getElementById('deliveredAmount').style.display = 'none';
+            document.getElementById('canceledAmount').style.display = 'none';
+            document.getElementById('returnAmount').style.display = 'block';
+        }
+    }
+
+    function showPeriod(type) {
+        if (type === 'one-week') {
+            document.getElementById('week-one').style.display = 'block';
+            document.getElementById('month-one').style.display = 'none';
+            document.getElementById('year-one').style.display = 'none';
+        }
+        else if (type === 'one-month') {
+            document.getElementById('week-one').style.display = 'none';
+            document.getElementById('month-one').style.display = 'block';
+            document.getElementById('year-one').style.display = 'none';
+        }
+        else if (type === 'one-year') {
+            document.getElementById('week-one').style.display = 'none';
+            document.getElementById('month-one').style.display = 'none';
+            document.getElementById('year-one').style.display = 'block';
         }
     }
 
