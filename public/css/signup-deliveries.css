@@ -18,7 +18,7 @@
 }
 
 .inputfield:focus{
-    border-color: #FF5733; 
+    border-color: #EE1313; 
     box-shadow: 5px 5px rgba(255, 87, 51, 0.5);
 }
 
@@ -75,6 +75,7 @@
     border: 0.2px solid grey;
     border-radius: 20px;
     margin: 1.5rem auto;
+    display: none;
 }
 
 .title{
@@ -90,6 +91,10 @@
     border-radius: 1rem;
 }
 
+.title2{
+    margin-top: 1rem;
+}
+
 .title p{
     font-size: 1.2rem;
     text-align: center;
@@ -102,6 +107,10 @@
     transition: 0.3s ease;
     display: flex;
     align-items: center;
+}
+
+.icon-hidden{
+    display: none;
 }
 
 .title i:hover{
