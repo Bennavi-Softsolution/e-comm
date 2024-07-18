@@ -286,20 +286,81 @@
             </div>
         </div>
 <!-- End of Modal for Address Change -->
-        <div class="card mb-4 slide-in-from-left fade-in">
-            <div class="card-body">
-                <h2 class="fw-bold">DELIVERY</h2>
-                <div class="p-4 border rounded">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <img src="images/Get Cash.png" alt="delivery" class="me-2">
-                        </div>
-                        <div class="col">
-                            <p class="fw-bold">Pick-up Station</p>
-                            <p>Delivery between 09-Jul and 10-Jul</p>
+<div class="card mb-4 slide-in-from-left fade-in">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold mb-0">DELIVERY</h2>
+            <button type="button" class="btn btn-custom btn-custom-effect" data-bs-toggle="modal"
+                data-bs-target="#deliveryModal">
+                CHOOSE DELIVERY METHOD
+            </button>
+        </div>
+        <div class="p-4 border rounded">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="images/Get Cash.png" alt="delivery" class="me-2">
+                </div>
+                <div class="col">
+                    <p class="fw-bold">Pick-up Station</p>
+                    <p>Delivery between 09-Jul and 10-Jul</p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Modal for Delivery Options -->
+                <div class="modal fade" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deliveryModalLabel">Select Delivery Method</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pick-up Station</h5>
+                                                <p class="card-text">Choose a pick-up station to collect your order.</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="deliveryMethod"
+                                                        id="pickupRadio" value="pickup">
+                                                    <label class="form-check-label" for="pickupRadio">
+                                                        Select Pick-up Station
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Home Delivery</h5>
+                                                <p class="card-text">Get your order delivered to your doorstep.</p>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="deliveryMethod"
+                                                        id="homeDeliveryRadio" value="homeDelivery">
+                                                    <label class="form-check-label" for="homeDeliveryRadio">
+                                                        Select Home Delivery
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of delivery modal -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-custom" id="confirmDeliveryBtn">Confirm</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
                 <div class="card mb-4 slide-in-from-left fade-in">
             <div class="card-body">
                 <div class="row align-items-center">
