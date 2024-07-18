@@ -34,20 +34,17 @@ body {
     margin-top: 0;
 }
 .quantity {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.product-quantity {
-    display: flex;
-    align-items: center;
+    gap: 0;
 }
 
 .quantity-input {
     max-width: 50px;
     text-align: center;
+    justify-content: center;
+    margin-left: 10px;
 }
 
 .remove {
@@ -68,6 +65,8 @@ body {
     background-color: #D9D9D9;
     padding: 20px;
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
 }
 .recommendations h2 {
     margin-bottom: 20px;
@@ -78,11 +77,14 @@ body {
     display: flex;
     gap: 30px;
     overflow-x: auto;
+    position: relative;
 }
 
 .carousel-inner {
     display: flex;
     align-items: stretch;
+    position: relative;
+    width: 100%;
 }
 
 .carousel-item {
@@ -93,15 +95,17 @@ body {
 .product-item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex: 0 0 auto;
     background-color: #fff;
     padding-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 300px;
+    max-width: 300px;
+    text-align: center;
 
 }
+
+
 .product-item img {
     width: 100%;
     border-radius: 8px;
@@ -148,6 +152,25 @@ body {
     background-color: darkred;
 }
 
+.carousel .prev-button,
+.carousel .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.carousel .prev-button {
+    left: 10px;
+}
+.carousel .next-button {
+    right: 10px;
+}
+
 @media (max-width: 768px) {
 
     .carousel-item {
@@ -156,6 +179,7 @@ body {
         text-align: center;
         margin-bottom: 20px;
         flex-direction: column;
+        align-items: center;
     }
 
     .carousel-inner {
@@ -167,6 +191,7 @@ body {
     .product-item {
         max-width: 100%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
    
    
@@ -182,19 +207,14 @@ body {
 
     
     .quantity {
-        display: flex;
         justify-content: center;
-        align-items: center;
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
 
-.carousel-item.single-item {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.carousel-item .product-item {
+    margin: 0 auto;
 }
 }
