@@ -5,24 +5,31 @@
 @section('home')
     <style>
         /* Custom sidebar and nav-pills styles */
+        .container-fluid {
+            display: flex;
+            gap: 20px; /* Gap between sidebar and main content */
+        }
+
         .sidebar {
             width: 240px;
             padding: 20px;
-            border-right: 1px solid #ddd;
-            /* Light border on the right */
-            transition: width 0.3s ease, padding 0.3s ease;
-            /* Transition for width and padding */
+            position: sticky;
+            top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(129, 110, 110, 0.3);
+            border-radius: 10px; /* Smoother rounding */
+            background-color: #f8f9fa; /* Light background color */
+            z-index: 1; /* Ensure sidebar stays above main content */
         }
 
         .sidebar:hover {
-            width: 260px;
-            padding: 25px;
+            transform: translateX(5px);
+            box-shadow: 0 0 10px rgba(129, 110, 110, 0.3); /* Darker shadow on hover */
         }
 
         .scrollable-sidebar {
             overflow-y: auto;
             max-height: calc(100vh - 120px);
-            /* Adjust based on your layout */
         }
 
         .nav-pills .nav-link {
@@ -40,174 +47,204 @@
 
         .nav-pills .nav-link:hover {
             background-color: #e9ecef;
-            color: #3b3b3b;
+            color: #cecbcb;
         }
 
         .nav-pills .nav-link.active {
-            background-color: #474747;
+            background-color: #007bff;
             color: #fff;
             border-color: #007bff;
         }
 
         #myTab.nav-pills {
             display: flex;
+            flex-direction: column;
         }
 
-
+        .main-content {
+            flex: 1; /* Take remaining space */
+            padding: 20px;
+            
+            
+        }
 
         @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                padding: 10px;
+            .container-fluid {
+                flex-direction: column; /* Stack sidebar and main content vertically */
+                gap: 0; /* No gap between sidebar and main content on small screens */
             }
 
+            .sidebar {
+                width: 100%; /* Full width sidebar on small screens */
+                padding: 10px;
+                margin-bottom: 20px; /* Optional: Add space below sidebar on small screens */
+            }
             #myTab.nav-pills {
                 display: flex;
+                flex-direction: row;
                 flex-wrap: nowrap;
                 /* Ensures items do not wrap on smaller screens */
             }
-
-
         }
 
         .rating-stars {
             color: #ffd700;
-            /* Default color for stars */
         }
 
         .scrollable-sidebar {
             overflow-x: auto;
-            /* Enable horizontal scrolling */
             white-space: nowrap;
-            /* Prevent wrapping of nav items */
             -webkit-overflow-scrolling: touch;
-            /* Enable smooth scrolling on iOS */
+        }
+
+        /* Dark mode adjustments */
+        @media (prefers-color-scheme: dark) {
+            .sidebar {
+                background-color: #343a40; /* Darker background color */
+                color: #f8f9fa; /* Lighter text color */
+            }
+
+            .nav-pills .nav-link {
+                color: #f8f9fa; /* Lighter text color */
+            }
+
+            .nav-pills .nav-link:hover {
+                background-color: #495057; /* Darker background color on hover */
+            }
+
+            .nav-pills .nav-link.active {
+                background-color: #6c757d; /* Darker active background color */
+            }
         }
     </style>
+
     <div class="container-fluid mt-3">
-        <div class="row">
-            <!-- Sidebar container (first column) -->
-            <div class="col-md-3 col-12 sidebar">
-                <div class="scrollable-sidebar">
-                    <ul id="myTab" class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i>
-                                Shoes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#watches"><i class="fas fa-clock"></i> Watches</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
-                        </li>
-                        
-                        <!-- Add more items as needed -->
-                    </ul>
-                </div>
+        <!-- Sidebar container (first column) -->
+        <div class="sidebar">
+            <div class="scrollable-sidebar">
+                <ul id="myTab" class="nav nav-pills gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i> Shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#watches"><i class="fas fa-clock"></i> Watches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#electronics"><i class="bi bi-joystick"></i> Sporting Goods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Toys"><i class="bi bi-car-front-fill"></i> Toys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#handb"><i class="fas fa-headphones"></i> Health & Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#homedecor"><i class="bi bi-shuffle"></i> Home Decor</a>
+                    </li>
+                    
+                    
+                    <!-- Add more items as needed -->
+                </ul>
             </div>
+        </div>
 
-
-
-            <!-- Main content container (second column) -->
-            <div class="col-md-9">
-                <div class="container-fluid">
-                    <div class="tab-content">
-                        <div id="shoes" class="tab-pane fade show active">
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
-                                @foreach ($shoes as $product)
-                                    <div class="col mb-3">
-                                        <div class="card h-100">
-                                            <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
-                                                alt="{{ $product->title }}">
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">{{ $product->title }}</h5>
-                                                <p class="card-text">{{ $product->description }}</p>
-                                                <div class="row justify-content-between align-items-end mt-auto">
-                                                    <div class="rating-stars">
-                                                        @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
-                                                        @endfor
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill">
-                                                            <i class="bi bi-cart-plus"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
+        <!-- Main content container (second column) -->
+        <div class="main-content">
+            <div class="tab-content">
+                <div id="shoes" class="tab-pane fade show active">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
+                        @foreach ($shoes as $product)
+                            <div class="col mb-3">
+                                <div class="card h-100">
+                                    <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
+                                        alt="{{ $product->title }}">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">{{ $product->title }}</h5>
+                                        <p class="card-text">{{ $product->description }}</p>
+                                        <div class="row justify-content-between align-items-end mt-auto">
+                                            <div class="rating-stars">
+                                                @for ($i = 0; $i < 5; $i++)
+                                                    <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                @endfor
+                                            </div>
+                                            <div class="col-auto">
+                                                <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-custom rounded-pill">
+                                                    <i class="bi bi-cart-plus"></i> Add to Cart
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                </div>
                             </div>
-                        </div>
-                        <div id="watches" class="tab-pane fade">
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
-                                @foreach ($watches as $product)
-                                    <div class="col mb-3">
-                                        <div class="card h-100">
-                                            <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
-                                                alt="{{ $product->title }}">
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">{{ $product->title }}</h5>
-                                                <p class="card-text">{{ $product->description }}</p>
-                                                <div class="row justify-content-between align-items-end mt-auto">
-                                                    <div class="rating-stars">
-                                                        @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
-                                                        @endfor
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <a href="#" class="btn btn-custom rounded-pill">
-                                                            <i class="bi bi-cart-plus"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div id="watches" class="tab-pane fade">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
+                        @foreach ($watches as $product)
+                            <div class="col mb-3">
+                                <div class="card h-100">
+                                    <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
+                                        alt="{{ $product->title }}">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">{{ $product->title }}</h5>
+                                        <p class="card-text">{{ $product->description }}</p>
+                                        <div class="row justify-content-between align-items-end mt-auto">
+                                            <div class="rating-stars">
+                                                @for ($i = 0; $i < 5; $i++)
+                                                    <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                @endfor
+                                            </div>
+                                            <div class="col-auto">
+                                                <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-custom rounded-pill">
+                                                    <i class="bi bi-cart-plus"></i> Add to Cart
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                </div>
                             </div>
-                        </div>
-                        <div id="accessories" class="tab-pane fade">
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
-                                @foreach ($accessories as $product)
-                                    <div class="col mb-3">
-                                        <div class="card h-100">
-                                            <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
-                                                alt="{{ $product->title }}">
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title">{{ $product->title }}</h5>
-                                                <p class="card-text">{{ $product->description }}</p>
-                                                <div class="row justify-content-between align-items-end mt-auto">
-                                                    <div class="rating-stars">
-                                                        @for ($i = 0; $i < 5; $i++)
-                                                            <i
-                                                                class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
-                                                        @endfor
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <a href="#" class="btn btn-outline-custom rounded-pill">
-                                                            <i class="bi bi-cart-plus"></i> Add to Cart
-                                                        </a>
-                                                    </div>
-                                                </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div id="accessories" class="tab-pane fade">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5 g-2">
+                        @foreach ($accessories as $product)
+                            <div class="col mb-3">
+                                <div class="card h-100">
+                                    <img src="{{ asset('images/' . $product->image) }}" class="card-img-top"
+                                        alt="{{ $product->title }}">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">{{ $product->title }}</h5>
+                                        <p class="card-text">{{ $product->description }}</p>
+                                        <div class="row justify-content-between align-items-end mt-auto">
+                                            <div class="rating-stars">
+                                                @for ($i = 0; $i < 5; $i++)
+                                                    <i class="bi bi-star{{ $i < $product->rating ? '-fill' : '' }}"></i>
+                                                @endfor
+                                            </div>
+                                            <div class="col-auto">
+                                                <h5 class="mt-2">KES {{ number_format($product->price) }}</h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-outline-custom rounded-pill">
+                                                    <i class="bi bi-cart-plus"></i> Add to Cart
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
