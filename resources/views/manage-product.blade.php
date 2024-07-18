@@ -16,12 +16,12 @@
 
     <div class="table-responsive">
         <table class="table table-striped table-hover">
-            <thead class="thead-dark table-dark">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Product</th>
                     <th scope="col"><div class="dropdown">
-                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Category
                         </button>
                         <ul class="dropdown-menu">
@@ -31,7 +31,7 @@
                         </ul>
                       </div></th>
                     <th scope="col"><div class="dropdown">
-                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Brand
                         </button>
                         <ul class="dropdown-menu">
