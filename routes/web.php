@@ -78,3 +78,7 @@ Route::get('/adminfooter', function () {
 Route::get('/order', function () {
     return view('order');
 });
+
+Route::get('/adminnavbar', function () {
+    return view('adminnavbar');
+});
