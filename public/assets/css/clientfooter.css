@@ -43,6 +43,7 @@ body{
 
 
   }
+
   .align-row{
     display: flex;
     flex-direction: row;
@@ -99,6 +100,7 @@ padding-bottom: 0vh;
     flex-direction: row;
 }
 .subscribe{
+    cursor: context-menu;
     padding-top: 10vh;
     font-weight: 700;
 }
@@ -125,12 +127,16 @@ table {
     border-collapse: collapse;
     width: 100%;
   }
+  th{
+    cursor: context-menu;
+  }
   
   th, td {
     padding: 8px;
     text-align: left;
     }
    td{
+  cursor: pointer;
   color: #676161f5;
   }
   .col1{
