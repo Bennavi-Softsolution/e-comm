@@ -34,8 +34,8 @@
   	 			<h4>payment method</h4>
 				<div class="payment-links">
     				<img src="{{ asset('images/m-pesa-logo.png') }}" alt="M-Pesa Logo" class="icon-size icon-spacing">
-    				<img src="{{ asset('images/mastercard-logo.png') }}" alt="MasterCard Logo" class="icon-size icon-spacing">
-    				<img src="{{ asset('images/visa-logo.png') }}" alt="VISA Logo" class="icon-size icon-spacing">
+    				<i class="fa fa-cc-mastercard" aria-hidden="true" alt="logo" class="icon-size icon-spacing"></i>
+    				<i class="fa fa-cc-visa" aria-hidden="true" alt="Logo" class="icon-size icon-spacing"></i>
 				</div>
 
                 	 

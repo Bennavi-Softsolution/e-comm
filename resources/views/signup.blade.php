@@ -1,31 +1,31 @@
 @extends('layouts.app')
 
 <div class="container">
-    <form id="signup-form">
+    <form id="signup-form" id="form-page">
         <div class="form-group row">
         </div>
         <div class="form-group row">
             <label for="inputFullName" class="mb-3 col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputFullName" placeholder="John Doe" required>
+                <input type="text" class="form-control inputfield" id="inputFullName" placeholder="John Doe" required>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputEmail" class="col-sm-2 mb-3 col-form-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="johndoe@example.com" required>
+                <input type="email" class="form-control inputfield" id="inputEmail" placeholder="johndoe@example.com" required>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputPhoneNumber" class="col-sm-2 mb-3 col-form-label">Phone Number</label>
             <div class="col-sm-10">
-                <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" required>
+                <input type="tel" class="form-control inputfield" id="inputPhoneNumber" placeholder="Phone Number" required>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputDistrict" class="col-sm-2 mb-3 col-form-label">District</label>
             <div class="col-sm-10">
-                <select id="inputDistrict" class="form-control" required>
+                <select id="inputDistrict" class="form-control inputfield" required>
                     <option value="">Choose...</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
@@ -36,20 +36,20 @@
         <div class="form-group row">
             <label for="inputAddress" class="col-sm-2 mb-3 col-form-label">Address</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Address" required>
+                <input type="text" class="form-control inputfield" id="inputAddress" placeholder="Address" required>
             </div>
         </div>
 
         <div class="form-group row">
             <label for="inputPassword" class="col-sm-2 mb-3 col-form-label">Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                <input type="password" class="form-control inputfield" id="inputPassword" placeholder="Password" required>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputConfirmPassword" class="col-sm-2 mb-3 col-form-label">Confirm Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password"
+                <input type="password" class="form-control inputfield" id="inputConfirmPassword" placeholder="Confirm Password"
                     required>
             </div>
         </div>

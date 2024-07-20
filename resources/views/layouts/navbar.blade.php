@@ -35,8 +35,8 @@
         margin-left: 20px;
     }
 
-     /* Ensuring icons are aligned properly */
-     .icons {
+    /* Ensuring icons are aligned properly */
+    .icons {
         display: flex;
         align-items: center;
     }
@@ -47,7 +47,6 @@
         justify-content: space-around;
         margin-left: 20px;
     }
-
 </style>
 
 <!--Main Content-->
@@ -99,20 +98,14 @@
                     <small class="text-muted">Forgot password? <a href="#">Click here</a></small>
                     <hr class="my-4">
                     <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                    <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
-                        <i class="bi bi-twitter"></i>
-                        <use xlink:href="#twitter" /></svg>
-                        Sign in with Twitter
-                    </button>
                     <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-                        <i class="bi bi-facebook"></i>
-                        <use xlink:href="#facebook" /></svg>
-                        Sign in with Facebook
+                        <i class="bi bi-google"></i>
+                        Sign in with Google
                     </button>
+
                     <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-                        <i class="bi bi-github"></i>
-                        <use xlink:href="#github" /></svg>
-                        Sign in with GitHub
+                        <i class="bi bi-apple"></i>
+                        Sign in with Apple
                     </button>
                 </form>
             </div>
